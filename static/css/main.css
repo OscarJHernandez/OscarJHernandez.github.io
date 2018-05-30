@@ -6,10 +6,10 @@
 }
 .full{ font-size: 16px; }
 .logo-img {
-    width: 56px;
-    height: 56px;
-    border-radius: 60px;
-    margin: 0 auto;
+    width: 164px;
+    height: 136px;
+    border-radius: 20px;
+    margin: 1px;
 }
 .logo-turner {
     font-size: 18px;
@@ -50,19 +50,19 @@ p.info a {
     margin: 20px 0 0;
 }
 .icon {
-    background: rgba(255, 255, 255, 0.63);
+    background: rgba(255, 255, 255, 0.93);
     border-radius: 100%;
     text-align: center;
     line-height: 20px;
-    font-size: 20px;
+    font-size: 30px;
     color: #354dff;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
+    padding: 7px;
+    width: 50px;
+    height: 50px;
     display: inline-block;
 }
 .icon:hover {
-    color: rgba(255, 255, 255, 0.63);
+    color: rgba(255, 255, 255, 0.93);
     background: #354dff;
 }
 .menu ul li {
@@ -71,7 +71,7 @@ p.info a {
 }
 
 .menu ul li a:hover, .menu ul li a:focus, li.current-menu-item > a{
-    background: #354dff;
+    background: #42b0e5;
 }
 li.current-menu-item:before {
     content: "";
@@ -103,11 +103,11 @@ h2.blog-title-pro{color: #fff;}
 h2.blog-title-pro:after {
     content: "";
     display: block;
-    width: 70px;
+    width: 80px;
     height: 4px;
-    margin-top: 16px;
+    margin-top: 10px;
     margin-left: 3px;
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 1.0);
 }
 span.tags{ margin: 0 2px;cursor: pointer;display: inline-block;}
 .card .card-image .card-image-headline-custom{
@@ -145,7 +145,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     font-size: 12px!important;
 }
 #portfolio-filter {
-        margin-top: 50px;
+        margin-top: 40px;
 }
 .navbar-toggle i {
     color: #354dff;
