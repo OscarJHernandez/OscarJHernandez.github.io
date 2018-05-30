@@ -4,8 +4,5 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for this Jekyll theme at: [github.com/ashutosh2k12/hcz-jekyll-blog](https://github.com/ashutosh2k12/hcz-jekyll-blog)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+I am a PhD. candidate studying theoretical nuclear physics at UBC and conducting my research abroad at the Johannes Gutenberg University in Mainz, Germany.
+I conduct my research under the supervision of [Dr. Sonia Bacca](https://wwwth.kph.uni-mainz.de/bacca-sonia/), carrying out simulations of light nuclei. 
