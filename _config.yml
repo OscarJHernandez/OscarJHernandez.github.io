@@ -1,16 +1,16 @@
-title: John Smith
+title: Oscar Javier Hernandez
 description: My Personal Blog
-author: John Smith
+author: Oscar Javier Hernandez
 logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
-about: Freelance developer
+github: https://github.com/OscarJHernandez
+about: Data Science | Machine Learning | AI
 
 baseurl: ""
 url: ""
 
 allowsearch: true
 
-disqus_shortname: aboutashu
+disqus_shortname: OscarJHernandez
 google_analytics: UA-72862926-1
 
 share:
