@@ -6,8 +6,9 @@
               <img id="about" class="logo-img" src="{{ site.logo }}" height="75px" width="75px">
             </div>
             <div class="row-details">
-              <h4 class="list-group-item-heading">{{ site.author }}</h4>
-              <p class="list-group-item-text">{{ site.about }}</p>
+              <h4 class="list-group-item-heading"><b>{{ site.author }}</b></h4>
+              <h5 class="list-group-item-text"><b>{{ site.about }}</b></h5>
+              <h5 class="list-group-item-text"><b>Contact:  {{ site.email }}</b></h5>
               {% include social_links.html %}
             </div>
             <div class="navbar-header pull-right">

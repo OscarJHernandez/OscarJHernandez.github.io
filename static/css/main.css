@@ -9,7 +9,7 @@
     width: 164px;
     height: 136px;
     border-radius: 20px;
-    margin: 1px;
+    margin: 2px;
 }
 .logo-turner {
     font-size: 18px;
@@ -24,7 +24,7 @@
 .row-picture {
     display: inline-block;
     vertical-align: top;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .row-details {
     display: inline-block;

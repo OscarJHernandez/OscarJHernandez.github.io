@@ -3,8 +3,8 @@ description: My Personal Blog
 author: Oscar Javier Hernandez
 logo: /static/img/avatar.png
 github: https://github.com/OscarJHernandez
-about: Data Science | Machine Learning | AI
-
+about: Data Science | AI | Machine Learning
+email: javierh@phas.ubc.ca
 baseurl: ""
 url: ""
 
