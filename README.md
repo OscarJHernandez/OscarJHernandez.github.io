@@ -1,5 +1,22 @@
-hankquinlan.github.io
-=====================
-This is demo data created by [Jonathan McGlone](http://jmcglone.com) and used in a [step-by-step beginners guide](http://jmcglone.com/guides/github-pages) to creating and hosting a personal website using GitHub and Jekyll. You can view the demo data at <http://hankquinlan.github.io> and read the guide at <http://jmcglone.com/guides/github-pages>. 
+## HCZ Material theme
 
-Users are free to copy and re-use any and all of the code contained here without contacting me.
+This is a simple personal material theme, best suited for personal authors, programmars, bloggers. 
+
+### Demo
+* [https://codeasashu.github.io/hcz-jekyll-blog](https://codeasashu.github.io/hcz-jekyll-blog/)
+
+#### Feature
+
+* Sitemap and XML Feed
+* Site Search 
+* Projects and tags
+* Paginations in homepage
+* Posts under category
+* Related Posts
+* Highlight pre
+* Next & Previous Post
+* Disqus comment
+
+#### Screenshot
+
+![Screenshot Home Page](https://raw.githubusercontent.com/ashutosh2k12/jekyllthemes/master/thumbnails/hcz-material.png  "Screenshot Home Page")
