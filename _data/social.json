@@ -1,18 +1,8 @@
 [
-  {
-    "icon": "fa-facebook",
-    "link": ""
-  },
-  {
-    "icon": "fa-twitter",
-    "link": ""
-  },
+
   {
     "icon": "fa-linkedin",
-    "link": ""
-  },
-  {
-    "icon": "fa-stack-exchange",
-    "link": ""
+    "link": "https://www.linkedin.com/in/oscar-javier-hernandez/"
   }
+
 ]
