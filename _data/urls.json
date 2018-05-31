@@ -24,5 +24,10 @@
     "text": "Github",
     "url": "https://github.com/OscarJHernandez/",
     "icon": "fa-github"
+  },
+    {
+    "text": "Linkedin",
+    "url": "https://www.linkedin.com/in/oscar-javier-hernandez/",
+    "icon": "fa-linkedin"
   }
 ]
