@@ -1,15 +1,15 @@
-.main.outer{padding-top: 50px;}
+.main.outer{padding-top: 20px;}
 .header-panel.shadow-z-2 {
     background-color: #354dff;
-    padding: 50px 0 15px 0;
+    padding: 20px 0 15px 0;
     width: 100%;
 }
 .full{ font-size: 16px; }
 .logo-img {
-    width: 192px;
-    height: 146px;
-    border-radius: 20px;
-    margin: 2px;
+    width: 0.192px;
+    height: 0.146px;
+    border-radius: 10px;
+    margin: 0px;
 }
 .logo-turner {
     font-size: 18px;
