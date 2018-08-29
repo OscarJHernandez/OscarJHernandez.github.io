@@ -1,29 +1,18 @@
-title: Oscar Javier Hernandez
-description: The home page for Oscar Javier Hernandez
-author: Oscar Javier Hernandez
-logo: /static/img/avatar.png
-github: https://github.com/OscarJHernandez
-about: Data Science | AI | Machine Learning
+# Site settings
+title: OscarJavierHernandez
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: Oscar Javier Hernandez
+user_description: I am a PhD researcher in nuclear theory, skilled in uncertainty quantification, numerical simulations, mathematical analysis, algorithm implementation. I am proficient in Python, Fortran, Linux environments, bash and C++.
 email: javierh@phas.ubc.ca
-linkedin: in/oscar-javier-hernandez/
-baseurl: ""
-url: ""
+twitter_username: lorem_ipsum
+github_username:  
+gplus_username:  lorem_ipsum
 
-allowsearch: true
+# Google-analytics
+google-analytics:
+  id: ""
 
-disqus_shortname: OscarJHernandez
-google_analytics: UA-72862926-1
-
-share:
-  twitter_username: \#
-  fb_appid: 000000000000
-
-
-enableTags: true
-tagarray: []
-
-paginate: 20
-per_page: 20
-paginate_path: "/page:num/"
-markdown: kramdown
-gems: [jekyll-paginate, jekyll-gist]
+exclude: ['package.json', 'src' , 'node_modules']
