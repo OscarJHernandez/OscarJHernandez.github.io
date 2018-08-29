@@ -6,40 +6,40 @@ permalink: /resume/
 
 
 ## __Education__
-    Summer 2006      Deep River Science Academy, Pinawa, Manitoba                     
-                       2007      Highschool Diploma, St. Boniface Diocesan Highschool, Honor student
-                       2013      Bsc. Joint Honours in Mathematics and Physics, Minor in Comp. Sci. The University of Manitoba
-                       2015      Masters in Physics,  The University of Manitoba, MSc. Thesis Link
-(Expected)  2019      PhD. in Physics,  The University of British Columbia 
+__(Expected)  2019__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD. in Physics,  The University of British Columbia   
+__2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Masters in Physics,  The University of Manitoba, [MSc. Thesis Link](https://mspace.lib.umanitoba.ca/handle/1993/30748)   
+__2013__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bsc. Joint Honours in Mathematics and Physics, Minor in Comp. Sci. The University of Manitoba                     
 
 ## __Experience__
-​           Fall 2017 - Present        Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  PRISMA/JG-University/The University of British Columbia
-
-           Fall 2015 - Fall 2017     Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF
-
-__2013 - 2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF/The University of Manitoba  
+__Fall 2017 - Present__ &nbsp;&nbsp; Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca, JG-University/UBC 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium
 
-__Summer 2013__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. Sonia Bacca, TRIUMF  
+__Fall 2015 - 2017__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium
 
-__Summer 2012__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. Eric Schippers, The University of Manitoba    
+__Fall 2013 - 2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF/The University of Manitoba  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Properties of Holomorphic functions on Riemann Surfaces.
+&nbsp;&nbsp;&nbsp;&nbsp;Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium
 
-​__Summer 2010__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. John Vail, The University of Manitoba  
+__Summer 2013__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. Sonia Bacca, TRIUMF  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Theoretical study of Charge Density waves having the Graphene Structure​.
+&nbsp;&nbsp;&nbsp;&nbsp;Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium
 
-__Summer 2009__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Research Student,  Supervisor: Dr. Sean Cadogan, The University of Manitoba   
+__Summer 2012__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. Eric Schippers, The University of Manitoba    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Mössbauer spectroscopy studies of meteorites.
+&nbsp;&nbsp;&nbsp;&nbsp;Properties of Holomorphic functions on Riemann Surfaces.
 
-__Summer 2007__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Research Student,  Supervisor: Dr. John Vail, The University of Manitoba   
+​__Summer 2010__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. John Vail, The University of Manitoba  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Computational study of point defects in AlN.
+&nbsp;&nbsp;&nbsp;&nbsp;Theoretical study of Charge Density waves having the Graphene Structure​.
+
+__Summer 2009__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Research Student,  Supervisor: Dr. Sean Cadogan, The University of Manitoba   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mössbauer spectroscopy studies of meteorites.
+
+__Summer 2007__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Research Student,  Supervisor: Dr. John Vail, The University of Manitoba   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computational study of point defects in AlN.
 
 
 ## __Publications__
@@ -69,15 +69,10 @@ Physics Letters B 736:344-349 (2014).
 | Feb.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal"> Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>       |  
 | July&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  TRIUMF Users Group Meeting, (Poster Presentation), Vancouver BC. Link</span>       |  
 | June&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  International Symposium on Symmetries in Subatomic Physics 2015, (Poster Presentation), Vancouver BC. Link</span>       |  
-
-
-        Feb.  2015    Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link
-
-        July 2014     Nuclear Structure Conference, (Poster Competiton), Vancouver BC. Link
-
-        May 2014     15th Annual Meeting of the Northwest Section of the APS, Seattle, WA. Link
-
-        Feb. 2014    Winter Nuclear and Particle Physics Conference, Banff, AB.
+| Feb.&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>       |  
+| July&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    Nuclear Structure Conference, (Poster Competiton), Vancouver BC. Link</span>       |  
+| May&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    15th Annual Meeting of the Northwest Section of the APS, Seattle, WA. Link</span>       |  
+| Feb.&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   Winter Nuclear and Particle Physics Conference, Banff, AB.</span>       |  
 
 
 ## __Awards__
@@ -90,7 +85,6 @@ Physics Letters B 736:344-349 (2014).
 | June&nbsp;2013     | &nbsp;              | <span style="font-weight:normal">TRIUMF Summer Research Award,  TRIUMF.</span>       |  
 | Sept&nbsp;2009     | &nbsp;              | <span style="font-weight:normal">Kenneth Roulston Memorial Scholarship, The University of Manitoba.</span>       |  
 
-## __Profesional Development__
 
 ## __Media Coverage__
 [Unravelling the Proton-Radius Puzzle](/https://innovation150.ca/story/unraveling-proton-radius-puzzle)&nbsp;&nbsp; Innovation 150, April 2017. Web.  
