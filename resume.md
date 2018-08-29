@@ -13,12 +13,11 @@ permalink: /resume/
 (Expected)  2019      PhD. in Physics,  The University of British Columbia 
 
 ## __Experience__
+​           Fall 2017 - Present        Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  PRISMA/JG-University/The University of British Columbia
 
-__Fall 2015 - Present __ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Graduate Research Assistant/ PhD. Student ,  Supervisor: Dr. Sonia Bacca,  TRIUMF
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nuclear Structure Corrections to light muonic atoms, two-body currents
+           Fall 2015 - Fall 2017     Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF
 
-__Fall 2013 - Fall 2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Graduate Research Assistant/ MSc. Student ,  Supervisor: Dr. Sonia Bacca,  TRIUMF/The University of Manitoba  
+__2013 - 2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF/The University of Manitoba  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium
 
@@ -70,10 +69,15 @@ Physics Letters B 736:344-349 (2014).
 | Feb.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal"> Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>       |  
 | July&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  TRIUMF Users Group Meeting, (Poster Presentation), Vancouver BC. Link</span>       |  
 | June&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  International Symposium on Symmetries in Subatomic Physics 2015, (Poster Presentation), Vancouver BC. Link</span>       |  
-| Feb&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>       |  
-| July&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   Nuclear Structure Conference, (Poster Competiton), Vancouver BC. Link</span>       |  
-| May&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   15th Annual Meeting of the Northwest Section of the APS, Seattle, WA. Link</span>       |  
-| Feb&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   Winter Nuclear and Particle Physics Conference, Banff, AB. </span>       |  
+
+
+        Feb.  2015    Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link
+
+        July 2014     Nuclear Structure Conference, (Poster Competiton), Vancouver BC. Link
+
+        May 2014     15th Annual Meeting of the Northwest Section of the APS, Seattle, WA. Link
+
+        Feb. 2014    Winter Nuclear and Particle Physics Conference, Banff, AB.
 
 
 ## __Awards__
