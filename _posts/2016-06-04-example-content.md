@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: resume
 title: Example content for posts  
 categories: others
 ---

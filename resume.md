@@ -73,9 +73,9 @@ O.J. Hernandez, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of 
 | Feb.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal"> Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>       |  
 | July&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  TRIUMF Users Group Meeting, (Poster Presentation), Vancouver BC. Link</span>       |  
 | June&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  International Symposium on Symmetries in Subatomic Physics 2015, (Poster Presentation), Vancouver BC. Link</span>       |  
-| Feb.&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>       |  
+| Feb.&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  [Progress in Ab Initio Techniques in Nuclear Physics](https://abinitio.triumf.ca/2015/index.html), (Poster Presentation), Vancouver BC. [Slides](https://abinitio.triumf.ca/2015/Javier_Hernandez.pdf)</span>       |  
 | July&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    Nuclear Structure Conference, (Poster Competiton), Vancouver BC. Link</span>       |  
-| May&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    15th Annual Meeting of the Northwest Section of the APS, Seattle, WA. Link</span>       |  
+| May&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    [15th Annual Meeting of the Northwest Section of the APS](http://meetings.aps.org/Meeting/NWS14/Session/G3.3), Seattle, WA. Link</span>       |  
 | Feb.&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   Winter Nuclear and Particle Physics Conference, Banff, AB.</span>       |  
 
 
