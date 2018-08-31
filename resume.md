@@ -7,7 +7,9 @@ permalink: /resume/
 
 ## __Education__
 __(Expected)  2019__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD. in Physics,  The University of British Columbia   
-__2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Masters in Physics,  The University of Manitoba, [MSc. Thesis Link](https://mspace.lib.umanitoba.ca/handle/1993/30748)   
+
+__2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Masters in Physics,  The University of Manitoba, [MSc. Thesis Link](https://mspace.lib.umanitoba.ca/handle/1993/30748)
+   
 __2013__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bsc. Joint Honours in Mathematics and Physics, Minor in Comp. Sci. The University of Manitoba                     
 
 ## __Experience__
