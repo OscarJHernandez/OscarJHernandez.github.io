@@ -1,5 +1,5 @@
 ---
-layout: resume
+layout: blog
 title: Example content for posts  
 categories: others
 ---
@@ -7,7 +7,8 @@ categories: others
 
 <p><small>This demo page has been used from <a href="http://jasonm23.github.io/markdown-css-themes/" target="_blank">http://jasonm23.github.io/markdown-css-themes/</a>.</small></p>
 
-<h1>A First Level Header</h1>
+<h1>{{ page.title }}</h1>
+<p>{{ page.date | date: '%B %d, %Y' }}</p>
 
 <h2>A Second Level Header</h2>
 
@@ -109,7 +110,7 @@ end tell
 
 ### Code snippet
 
-{% highlight python %}
+```python
 if __name__ =='__main__':
     img_thread = threading.Thread(target=downloadWallpaper)
     img_thread.start()
@@ -121,4 +122,18 @@ if __name__ =='__main__':
         time.sleep(0.3)
     img_thread.join()
     print('\nImage of the day downloaded.')
-{% endhighlight %}
+```
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
+<ul>
+{% for post in site.posts %}
+    <a href="{{ post.url }}/#about">
+      <h5>{{ post.title }}</h5>
+    </a>
+{% endfor %}
+</ul>
