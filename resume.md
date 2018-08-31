@@ -78,7 +78,7 @@ O.J. Hernandez, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of 
 | Feb.&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  [Progress in Ab Initio Techniques in Nuclear Physics](https://abinitio.triumf.ca/2015/index.html), (Poster Presentation), Vancouver BC. [Slides](https://abinitio.triumf.ca/2015/Javier_Hernandez.pdf)</span>       |  
 | July&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   [Nuclear Structure Conference](http://ns2014.triumf.ca/), (Poster Competiton), Vancouver BC.</span>       |  
 | May&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    [15th Annual Meeting of the Northwest Section of the APS](http://meetings.aps.org/Meeting/NWS14/Session/G3.3), Seattle, WA. Link</span>       |  
-| Feb.&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   Winter Nuclear and Particle Physics Conference, Banff, AB.</span>       |  
+| Feb.&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   [Winter Nuclear and Particle Physics Conference](http://wnppc.triumf.ca/2014/program.html), Banff, AB.</span>       |  
 
 
 ## __Awards__
