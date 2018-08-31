@@ -43,26 +43,30 @@ __Summer 2007__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 
 
 ## __Publications__
-O. J. Hernandez, S. Bacca, and K. Wendt, "Recent developments in nuclear structure theory: an outlook on the muonic atom program". To appear in POS, 2017. arXiv:1712.05187
+C. Ji, S. Bacca, N. Barnea, O. J. Hernandez, N. Nevo-Dinur, "Ab initio calculation of nuclear structure corrections in muonic atoms", [Journal of Phys. G 45, 093002, 2018.](http://iopscience.iop.org/article/10.1088/1361-6471/aad3eb/meta) [arXiv:1806.03101](https://arxiv.org/abs/1806.03101)
 
-O. J. Hernandez, A. Ekström, N. N. Dinur, C. Ji, S. Bacca, and N. Barnea,  "The deuteron-radius puzzle is alive: a new analysis of nuclear structure uncertainties", Phys. Lett. B 778, 377-383, (2018)     arXiv:1711.01199
+O. J. Hernandez, S. Bacca, and K. Wendt, "Recent developments in nuclear structure theory: an outlook on the muonic atom program". [PoS(BORMIO2017)041](https://pos.sissa.it/302/041/). [arXiv:1712.05187](https://arxiv.org/abs/1712.05187)
 
-J. M Vail, O. J. Hernandez, M. Si, and Z. Wang. “Graphene Electronic Structure in Charge Density Waves.” Journal of Materials Research, 32(18), 3494-3506, (2017)
+O. J. Hernandez, A. Ekström, N. N. Dinur, C. Ji, S. Bacca, and N. Barnea,  "The deuteron-radius puzzle is alive: a new analysis of nuclear structure uncertainties", [Phys. Lett. B 778, 377-383, (2018).](https://www.sciencedirect.com/science/article/pii/S0370269318300510?via%3Dihub)  [arXiv:1711.01199](https://arxiv.org/abs/1711.01199)
+
+J. M Vail, O. J. Hernandez, M. Si, and Z. Wang. “Graphene Electronic Structure in Charge Density Waves.” [Journal of Materials Research, 32(18), 3494-3506, (2017).](https://www.cambridge.org/core/journals/journal-of-materials-research/article/graphene-electronic-structure-in-charge-density-waves/523D04577666A4659F6CE12DC7B97F01)
 
 O. J. Hernandez, N. N. Dinur, C. Ji, S. Bacca, and N. Barnea . Update on nuclear structure effects in light muonic atoms.  
-Hyperfine Interact. 237: 158,  arXiv:1604.06496   (2016)
+[Hyperfine Interact. 237: 158, (2016).](https://link.springer.com/article/10.1007%2Fs10751-016-1371-9)  [arXiv:1604.06496](https://arxiv.org/abs/1604.06496)
 
-C. Ji, O.J. Hernandez, N. Nevo Dinur, S. Bacca, N. Barnea. Understanding the proton radius puzzle: Nuclear structure effects in light muonic atoms, EPJ Web of Conferences 113, 03006,  arXiv:1509.01430v1 (2015)
+C. Ji, O.J. Hernandez, N. Nevo Dinur, S. Bacca, N. Barnea. Understanding the proton radius puzzle: Nuclear structure effects in light muonic atoms, [EPJ Web of Conferences 113, 03006 2015.](https://www.epj-conferences.org/articles/epjconf/abs/2016/08/epjconf_fb2016_03006/epjconf_fb2016_03006.html),  [arXiv:1509.01430](https://arxiv.org/abs/1509.01430)
 
 O.J. Hernandez, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of the nuclear structure corrections in μD,
-Physics Letters B 736:344-349 (2014).
+[Phys. Letters B 736:344-349 (2014).](https://www.sciencedirect.com/science/article/pii/S0370269314005413?via%3Dihub) [arXiv:1406.5230](https://arxiv.org/abs/1406.5230)
 
-​J.M Vail, T. Haroon, J. Hernandez-Melgar, D.K Chevrier, and R. Pandey. Nitrogen Vancancy and Oxygen Impurity in AlN: Spintronic Quantum Dots. Radiation Effects and Defects in Solids,164(10):585-591,(2009).
+​J.M Vail, T. Haroon, J. Hernandez-Melgar, D.K Chevrier, and R. Pandey. Nitrogen Vancancy and Oxygen Impurity in AlN: Spintronic Quantum Dots. [Radiation Effects and Defects in Solids,164(10):585-591,(2009).](https://www.tandfonline.com/doi/abs/10.1080/10420150903188443)
 
 ## __Talks and Poster Presentations__
 
 |               |               |             | 
 | :----------------- |---------------|:-------------| 
+| July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[Precision Measurements and Fundamental Physics: The Proton Radius Puzzle and Beyond](https://indico.mitp.uni-mainz.de/event/132/overview), (Invited talk), Mainz Germany. [Slides](https://indico.mitp.uni-mainz.de/event/132/contribution/23/material/slides/0.pdf) </span>  |
+| July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[XXII International Conference on Few-Body Problems in Physics](https://fb22-caen.sciencesconf.org/), (Talk), Caen, France.</span>  |
 | Feb&nbsp;2017     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>  |
 | Oct.&nbsp;2016     | &nbsp;             | <span style="font-weight:normal"> ACOT,  Advisory committee on TRIUMF, Vancouver, BC.</span>    |   
 | Oct.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal">DNP Annual Fall Meeting of the Division of Nuclear Physics, Vancouver, BC. Link</span>       |  
