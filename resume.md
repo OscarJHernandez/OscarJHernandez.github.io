@@ -67,14 +67,14 @@ O.J. Hernandez, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of 
 | :----------------- |---------------|:-------------| 
 | July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[Precision Measurements and Fundamental Physics: The Proton Radius Puzzle and Beyond](https://indico.mitp.uni-mainz.de/event/132/overview), (Invited talk), Mainz Germany. [Slides](https://indico.mitp.uni-mainz.de/event/132/contribution/23/material/slides/0.pdf) </span>  |
 | July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[XXII International Conference on Few-Body Problems in Physics](https://fb22-caen.sciencesconf.org/), (Talk), Caen, France.</span>  |
-| Feb&nbsp;2017     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>  |
+| Feb&nbsp;2017     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal"> [Progress in Ab Initio Techniques in Nuclear Physics](https://abinitio.triumf.ca/2018/), (Poster Presentation), Vancouver BC. [Slides](https://abinitio.triumf.ca/2018/Oscar_Javier_Hernandez_2018_Deuteron_Radius_Puzzle.pdf)</span>  |
 | Oct.&nbsp;2016     | &nbsp;             | <span style="font-weight:normal"> ACOT,  Advisory committee on TRIUMF, Vancouver, BC.</span>    |   
-| Oct.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal">DNP Annual Fall Meeting of the Division of Nuclear Physics, Vancouver, BC. Link</span>       |  
-| Feb.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal"> Progress in Ab Initio Techniques in Nuclear Physics Conference, (Poster Presentation), Vancouver BC. Link</span>       |  
-| July&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  TRIUMF Users Group Meeting, (Poster Presentation), Vancouver BC. Link</span>       |  
-| June&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  International Symposium on Symmetries in Subatomic Physics 2015, (Poster Presentation), Vancouver BC. Link</span>       |  
+| Oct.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal">[DNP Annual Fall Meeting of the Division of Nuclear Physics](https://www.aps.org/meetings/meeting.cfm?name=DNP16), Talk, Vancouver, BC. [Abstract](http://meetings.aps.org/Meeting/DNP16/Session/HC.6)</span>       |  
+| Feb.&nbsp;2016     | &nbsp;              | <span style="font-weight:normal"> [Progress in Ab Initio Techniques in Nuclear Physics](https://abinitio.triumf.ca/2016/), (Poster Presentation), Vancouver BC. [Slides](https://abinitio.triumf.ca/2016/OJavierHernandez_FEB2016.pdf)</span>       |  
+| July&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  TRIUMF Users Group Meeting, (Poster Presentation), Vancouver BC.</span>       |  
+| June&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  [International Symposium on Symmetries in Subatomic Physics 2015](http://ssp2015.triumf.ca/), (Poster Presentation), Vancouver BC.</span>       |  
 | Feb.&nbsp;2015     | &nbsp;              | <span style="font-weight:normal">  [Progress in Ab Initio Techniques in Nuclear Physics](https://abinitio.triumf.ca/2015/index.html), (Poster Presentation), Vancouver BC. [Slides](https://abinitio.triumf.ca/2015/Javier_Hernandez.pdf)</span>       |  
-| July&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    Nuclear Structure Conference, (Poster Competiton), Vancouver BC. Link</span>       |  
+| July&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   [Nuclear Structure Conference](http://ns2014.triumf.ca/), (Poster Competiton), Vancouver BC.</span>       |  
 | May&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">    [15th Annual Meeting of the Northwest Section of the APS](http://meetings.aps.org/Meeting/NWS14/Session/G3.3), Seattle, WA. Link</span>       |  
 | Feb.&nbsp;2014     | &nbsp;              | <span style="font-weight:normal">   Winter Nuclear and Particle Physics Conference, Banff, AB.</span>       |  
 
@@ -91,5 +91,5 @@ O.J. Hernandez, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of 
 
 
 ## __Media Coverage__
-[Unravelling the Proton-Radius Puzzle](/https://innovation150.ca/story/unraveling-proton-radius-puzzle)&nbsp;&nbsp; Innovation 150, April 2017. Web.  
-[Unravelling the Proton-Radius Puzzle](/http://www.triumf.ca/research-highlights/experimental-result/unravelling-proton-radius-puzzle)&nbsp;&nbsp; TRIUMF, 28 Nov. 2014. Web.
+[Unravelling the Proton-Radius Puzzle](https://innovation150.ca/story/unraveling-proton-radius-puzzle)&nbsp;&nbsp; Innovation 150, April 2017. Web.  
+[Unravelling the Proton-Radius Puzzle](http://www.triumf.ca/research-highlights/experimental-result/unravelling-proton-radius-puzzle)&nbsp;&nbsp; TRIUMF, 28 Nov. 2014. Web.
