@@ -1,0 +1,14 @@
+<div class="user-details">
+<div style="background-color:#F0F0F0">
+<back>
+  <h1> Featured Blog Posts </h1>
+    <ul>
+		  {% for post in site.posts %}
+		  <a href="{{ post.url }}/#about">
+			  <h3>{{ post.date | date: '%B %d, %Y' }}  :  {{ post.title}}</h3>
+		   </a>
+			  {% endfor %}
+   </ul>
+</back>  
+</div>
+</div>

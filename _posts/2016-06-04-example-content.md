@@ -40,10 +40,4 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 {% endhighlight %}
 
-<ul>
-{% for post in site.posts %}
-    <a href="{{ post.url }}/#about">
-      <h5>{{ post.title }}</h5>
-    </a>
-{% endfor %}
-</ul>
+

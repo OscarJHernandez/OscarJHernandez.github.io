@@ -18,8 +18,11 @@ permalink: /blog/
 
 I discuss the meaning of sample pages and put some content.  
 
-![My helpful screenshot]({{ "/assets/img/skate.jpg" | absolute_url }})
-
+<div class="user-projects">
+  <div class="images-left">
+    <img alt="mountains" src="{{ "/assets/img/skate.jpg" | prepend: site.baseurl }}" />
+  </div>
+</div>
 
 ## Older Posts
 #### [August 27, 2018: An amazing old post](_posts/2016-06-04-test-page.md):
