@@ -1,14 +1,11 @@
 <div class="user-details">
 <div style="background-color:#F0F0F0">
-<back>
-  <h1> Featured Blog Posts </h1>
-    <ul>
-		  {% for post in site.posts %}
-		  <a href="{{ post.url }}/#about">
-			  <h3>{{ post.date | date: '%B %d, %Y' }}  :  {{ post.title}}</h3>
-		   </a>
-			  {% endfor %}
+   <h1> Featured Posts </h1>
+   <ul>
+   <h3><a href="/others/2016/06/04/example-content.html#about">Sept 1, 2018: An Amazing Sample</a></h3>
+   <h3><a href="/others/2015/06/04/test-page.html#about"> August 27, 2018: An amazing old post</a></h3>
    </ul>
-</back>  
+   <h3><a href="/blog/#about"> More Posts </a></h3>
+   
 </div>
 </div>
