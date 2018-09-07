@@ -59,6 +59,15 @@ In order to compile the assets and run Jekyll on local you need to follow those 
 - Run `npm install`
 - Run `gulp`
 
+## Running Locally with Jekyll:
+* Install gem bundler:
+$ gem install bundler
+$ bundle install
+$ sudo apt-get install ruby2.3 ruby2.3-dev 
+
+* Run locally
+$ bundle exec jekyll serve
+
 ## Questions
 
 Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
