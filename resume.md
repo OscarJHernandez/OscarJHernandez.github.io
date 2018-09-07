@@ -67,6 +67,7 @@ O.J. Hernandez, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of 
 
 |               |               |             | 
 | :----------------- |---------------|:-------------| 
+| Sept.&nbsp;2018    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[SFB-School 2018](https://indico.mitp.uni-mainz.de/event/172/program), (Talk), Boppard Germany.</span>  |
 | July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[Precision Measurements and Fundamental Physics: The Proton Radius Puzzle and Beyond](https://indico.mitp.uni-mainz.de/event/132/overview), (Invited talk), Mainz Germany. [Slides](https://indico.mitp.uni-mainz.de/event/132/contribution/23/material/slides/0.pdf) </span>  |
 | July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[XXII International Conference on Few-Body Problems in Physics](https://fb22-caen.sciencesconf.org/), (Talk), Caen, France.</span>  |
 | Feb&nbsp;2017     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal"> [Progress in Ab Initio Techniques in Nuclear Physics](https://abinitio.triumf.ca/2018/), (Poster Presentation), Vancouver BC. [Slides](https://abinitio.triumf.ca/2018/Oscar_Javier_Hernandez_2018_Deuteron_Radius_Puzzle.pdf)</span>  |
