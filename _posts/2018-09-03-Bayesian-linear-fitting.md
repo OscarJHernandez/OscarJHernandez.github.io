@@ -21,11 +21,13 @@ Bayesian theory in the process and reach our weight goals. Now lets get our hand
 
 
 # Theory
-The main idea is that we have a set of data points $D=\lbrace x_i,y_i | i=0,..,N \rbrace$ and we want to 
-determine the parameters of the model $M$ that will best descibribe the set D. We begin by writing out 
+The main idea is that we have a set of data points ![image](http://latex.codecogs.com/gif.latex?D=\lbrace&space;x_i,y_i&space;|&space;i=0,..,N&space;\rbrace) and we want to 
+determine the parameters of the model ![image](http://latex.codecogs.com/gif.latex?M) that will best descibribe the set ![image](http://latex.codecogs.com/gif.latex?D). We begin by writing out 
 
 
-$P(D|M) = $
+![equation](http://latex.codecogs.com/gif.latex?P(a|D)&space;=&space;\int&space;db&space;\&space;P(a,b|&space;D))  
+
+![equation]
 
 ## Sampling the Posterior (Markov Chain Monte Carlo)  
 Now, we have written down the likelyhood function that we want to sample. We will use the pythong library emcee, which is an 

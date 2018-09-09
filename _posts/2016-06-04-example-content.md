@@ -11,6 +11,8 @@ categories: others
 <p>{{ page.date | date: '%B %d, %Y' }}</p>
 
 
+![equation](http://latex.codecogs.com/gif.latex?f(x)&space;=&space;\frac{1}{1&plus;x})
+
 ### Code snippet
 
 {% highlight python linenos %}
