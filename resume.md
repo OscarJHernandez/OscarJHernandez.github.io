@@ -67,6 +67,7 @@ O.J. Hernandez, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of 
 
 |               |               |             | 
 | :----------------- |---------------|:-------------| 
+| Oct.&nbsp;2018    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[Uncertainty Quantification at the Extremes (ISNET-6) 2018](https://indico.gsi.de/event/7534/overview), (Talk), Darmstadt Germany. [Slides](https://indico.gsi.de/event/7534/contribution/19/material/slides/0.pdf)</span>  |
 | Sept.&nbsp;2018    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[SFB-School 2018](https://indico.mitp.uni-mainz.de/event/172/program), (Talk), Boppard Germany.</span>  |
 | July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[Precision Measurements and Fundamental Physics: The Proton Radius Puzzle and Beyond](https://indico.mitp.uni-mainz.de/event/132/overview), (Invited talk), Mainz Germany. [Slides](https://indico.mitp.uni-mainz.de/event/132/contribution/23/material/slides/0.pdf) </span>  |
 | July&nbsp;2018     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span style="font-weight:normal">[XXII International Conference on Few-Body Problems in Physics](https://fb22-caen.sciencesconf.org/), (Talk), Caen, France.</span>  |
