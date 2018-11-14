@@ -10,6 +10,11 @@ categories: others
 <h1>{{ page.title }}</h1>
 <p>{{ page.date | date: '%B %d, %Y' }}</p>
 
+### Better equations:
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
+
 
 ![equation](http://latex.codecogs.com/gif.latex?f(x)&space;=&space;\frac{1}{1&plus;x})
 

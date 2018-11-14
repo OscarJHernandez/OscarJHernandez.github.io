@@ -12,13 +12,14 @@ permalink: /blog/
 
 <hr />
 
-# Featured Posts  
-
-### Content coming soon!
-
 $$
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
 $$
+
+
+# Featured Posts  
+
+### Content coming soon!
 
 <!--- ### [Sept 1, 2018: An Amazing Sample](_posts/2016-06-04-example-content.md/#about): --->
 
