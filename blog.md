@@ -12,6 +12,10 @@ permalink: /blog/
 
 <hr />
 
+## Useful Machine Learning Resources:
+* [A high-bias, low-variance introduction to Machine Learning for physicists: ArXiv 1803.08823](https://arxiv.org/abs/1803.08823)   
+* [Machine learning lectures for physicists](https://machine-learning-for-physicists.org/)
+
 $$
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
 $$
