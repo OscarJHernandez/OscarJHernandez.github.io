@@ -25,7 +25,17 @@ $$
 
 # Featured Posts  
 
+## Statistics and Probability Notes
+[Probability Calculus and Bayes Theorem](_posts/2018-12-06-Probability_Calculus.md/#about)
+
+## Machine Learning Notes 
+[Precision, Recall and all that](_posts/2018-12-06-Precision_Recall_and_all_that.md/#about)  
+[Bias-Variance Decomposition](_posts/2018-12-06-Bias_Variance_decompositon.md/#about)
+
+
 ### Content coming soon!
+
+[]
 
 <!--- ### [Sept 1, 2018: An Amazing Sample](_posts/2016-06-04-example-content.md/#about): --->
 
