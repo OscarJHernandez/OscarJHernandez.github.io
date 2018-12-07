@@ -169,6 +169,16 @@ $$
 
 Let us now consider the density given by,
 
+<center>
+<img src="/assets/img/binary_classifier.png"
+     alt="Markdown Monster icon"
+     width ="50%"
+     height = "50%"/>
+</center>
+<center>
+$${\bf \text{Figure 1: }}\text{The probability distribution of the true density }T_p(x) \text{ and the true negative distribution } T_n(x)$$. 
+</center>
+
 $$
 \rho(x) = T_p(t)F_p(t)
 $$
