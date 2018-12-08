@@ -28,20 +28,23 @@ Let us call the outcome with a +1 value, be the positive value while the 0 is ca
 ## Definitions
 
 For our binary classifier model trained on $$T$$ is denoted as $$\hat{g}_T.$$ The number of positive samples in $$T$$ is 
-$$N_p$$, while the number of negative samples is $$N_n$$, then we define the following
+$$N_p$$, while the number of negative samples is $$N_n$$. The total number of samples is $N$,
 
 $$
-N = N_p+N_n \\
-T_p = \text{ True Positives} \\
-T_n = \text{ True Negatives} \\
-F_p = \text{ False Positives} \\
-F_n = \text{ False Negatives} \\
-N = T_p+T_n+F_p+F_n.
+\begin{align}
+N &= N_p+N_n \\
+T_p &= \text{ True Positives} \\
+T_n &= \text{ True Negatives} \\
+F_p &= \text{ False Positives} \\
+F_n &= \text{ False Negatives} \\
+N_p &= T_p+F_n \\
+N_n &= T_n+F_p \\
+N &= T_p+T_n+F_p+F_n.
+\end{align}
 $$
 
 
-Furthermore, we denote
-
+Furthermore, we denote the estimates of $$N_p$$ and $$N_n$$ given by our classifier as $$\hat{N}_p$$ and $$\hat{N}_n$$,
 $$
 \hat{N}_p = \text{ Number of positive predictions by classifier}, \\
 \hat{N}_n = \text{ Number of negative predictions by classifier}, \\
@@ -118,6 +121,7 @@ Of the samples, $$\hat{N}_p$$, that the classifier thought were positive, how ma
 
 $$
 p = P({\bf y}={\bf 1}| {\bf \hat{y}} = {\bf 1}) \\
+  = \frac{T_p}{\hat{N}_p} \\
   = \frac{T_p}{T_p+F_p}
 $$
 
@@ -129,10 +133,11 @@ $$0 \leq p \leq 1$$
 
 
 ## Recall 
-Recall, is the metric
+Recall, is the metric that measures the fraction of positively identified samples, 
 
 $$
 r = P( {\bf \hat{y}}={\bf 1} | {\bf y}={\bf 1}) \\
+  = \frac{T_p}{N_p} \\
   = \frac{T_p}{T_p+F_n}
 $$
 
@@ -176,7 +181,7 @@ Let us now consider the density given by,
      height = "50%"/>
 </center>
 <center>
-$${\bf \text{Figure 1: }}\text{The probability distribution of the true density }T_p(x) \text{ and the true negative distribution } T_n(x)$$. 
+<b>Figure 1: </b> A schematic of the true negative and true positive distributions.
 </center>
 
 $$
@@ -201,13 +206,13 @@ By __Bayes theorem__ we have that
 $$
 P({\bf y}={\bf 1}| {\bf \hat{y}} = {\bf 1}) = \frac{P({\bf \hat{y}} = {\bf 1}|{\bf y}={\bf 1})P({\bf y}={\bf 1})}{P({\bf \hat{y}}={\bf 1})} \\
 = P({\bf \hat{y}} = {\bf 1}|{\bf y}={\bf 1}) \frac{T_p+F_n}{T_p+F_p} \\
-= P({\bf \hat{y}} = {\bf 1}|{\bf y}={\bf 1})\left(\frac{1+\frac{F_n}{T_p}}{1+\frac{F_p}{T_p}} \right)
+= P({\bf \hat{y}} = {\bf 1}|{\bf y}={\bf 1}) \frac{N_p}{\hat{N}_p}
 $$
 
 In otherwords, we find that
 
 $$
-p = r \left(\frac{1+\frac{F_n}{T_p}}{1+\frac{F_p}{T_p}} \right)
+p = r \left(\frac{N_p}{\hat{N}_p}\right)
 $$
 
 
