@@ -12,17 +12,6 @@ permalink: /blog/
 
 <hr />
 
-## Useful Machine Learning Resources:
-* [A high-bias, low-variance introduction to Machine Learning for physicists: ArXiv 1803.08823](https://arxiv.org/abs/1803.08823)   
-* [Machine learning lectures for physicists](https://machine-learning-for-physicists.org/)  
-* [Stanford Deep Learning Cheatsheet](https://github.com/afshinea/stanford-cs-230-deep-learning)
-* [An Introduction to Deep Reinforcement Learning](https://arxiv.org/abs/1811.12560)
-* [Machine Learning for Many Body Physics: Perimeter Institute Lectures](http://pirsa.org/C18002)
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
 
 # Featured Posts  
 
@@ -34,9 +23,14 @@ $$
 [Bias-Variance Decomposition](_posts/2018-12-06-Bias_Variance_decompositon.md/#about)
 
 
-### Content coming soon!
+## Useful Machine Learning Resources:
+The following links have been very useful or interesting to learn from
+* [A high-bias, low-variance introduction to Machine Learning for physicists: ArXiv 1803.08823](https://arxiv.org/abs/1803.08823)   
+* [Machine learning lectures for physicists](https://machine-learning-for-physicists.org/)  
+* [Stanford Deep Learning Cheatsheet](https://github.com/afshinea/stanford-cs-230-deep-learning)
+* [An Introduction to Deep Reinforcement Learning](https://arxiv.org/abs/1811.12560)
+* [Machine Learning for Many Body Physics: Perimeter Institute Lectures](http://pirsa.org/C18002)
 
-[]
 
 <!--- ### [Sept 1, 2018: An Amazing Sample](_posts/2016-06-04-example-content.md/#about): --->
 

@@ -23,7 +23,8 @@ Let us call the outcome with a +1 value, be the positive value while the 0 is ca
 2. [Precision](#precision)
 3. [Recall](#recall)
 4. [The F Metric](#the-f-metric)
-5. [The link between accuracy, recall and precision](#connection_between_accuracy_,_recall_and_precision)
+5. [The ROC curve](#roc-curve)
+6. [The link between accuracy, recall and precision](#connection-between-accuracy-recall-and-precision)
 
 ## Definitions
 
@@ -64,8 +65,8 @@ when we divide $$C$$ by the number of samples, then we can give the confusion ma
 
 $$
 \mathcal{C}= \begin{bmatrix}
-P({\bf \hat{y}}={\bf 1}|{\bf y}={\bf 1}) & P({\bf \hat{y}}={\bf 1}|{\bf y}={\bf 0})\\
- P({\bf \hat{y}}={\bf 0}|{\bf y}={\bf 1}) & P({\bf \hat{y}}={\bf 0}|{\bf y}={\bf 0})
+P({\bf \hat{y}}={\bf 1}|{\bf y}={\bf 1},\hat{g}_T) & P({\bf \hat{y}}={\bf 1}|{\bf y}={\bf 0},\hat{g}_T)\\
+ P({\bf \hat{y}}={\bf 0}|{\bf y}={\bf 1},\hat{g}_T) & P({\bf \hat{y}}={\bf 0}|{\bf y}={\bf 0},\hat{g}_T)
 \end{bmatrix} 
 $$
 
@@ -100,8 +101,8 @@ $$
 How well did the classifier get the correct labels.
 
 $$
-a = P({\bf y}={\bf \hat{y}}) \\
-= P({\bf y}={\bf \hat{y}}, {\bf y}=1)+P({\bf y}={\bf \hat{y}}, {\bf y}=0)\\
+a = P({\bf y}={\bf \hat{y}},\hat{g}_T) \\
+= P({\bf y}={\bf \hat{y}}, {\bf y}=1,\hat{g}_T)+P({\bf y}={\bf \hat{y}}, {\bf y}=0,\hat{g}_T)\\
 = \left( \frac{T_p}{N} \right) + \left( \frac{T_n}{N} \right) \\
 = \frac{T_p+T_n}{N}
 $$
@@ -120,7 +121,7 @@ $$
 Of the samples, $$\hat{N}_p$$, that the classifier thought were positive, how many are actually correct ?
 
 $$
-p = P({\bf y}={\bf 1}| {\bf \hat{y}} = {\bf 1}) \\
+p = P({\bf y}={\bf 1}| {\bf \hat{y}} = {\bf 1},\hat{g}_T) \\
   = \frac{T_p}{\hat{N}_p} \\
   = \frac{T_p}{T_p+F_p}
 $$
@@ -136,7 +137,7 @@ $$0 \leq p \leq 1$$
 Recall, is the metric that measures the fraction of positively identified samples, 
 
 $$
-r = P( {\bf \hat{y}}={\bf 1} | {\bf y}={\bf 1}) \\
+r = P( {\bf \hat{y}}={\bf 1} | {\bf y}={\bf 1},\hat{g}_T) \\
   = \frac{T_p}{N_p} \\
   = \frac{T_p}{T_p+F_n}
 $$
@@ -172,7 +173,39 @@ $$
 
 ## ROC curve
 
-Let us now consider the density given by,
+The Receiver operator curve is the plot generated when one plots the True positive rate $$T_p$$ vs the False positive rate $$F_p$$ for
+a classifier that depends on a parameter $$\Lambda$$.
+
+<center>
+<img src="/assets/img/ROC_curve.png"
+     alt="Markdown Monster icon"
+     width ="50%"
+     height = "50%"/>
+</center>
+<center>
+<b>Figure 1 : </b>  A sample ROC. 
+</center>
+
+The area $$\mathcal{A}$$ of the ROC curve can be interpreted as the probability that a random sample $$x$$ such that
+$$x \in P$$ will be classified as a True positive, compared to a False Positive.
+
+ satisfies the following properties,
+
+* a __perfect__ classifier would have $$\mathcal{A}=1$$,  
+* a __terrible__ classifier has $$\mathcal{A}=0$$,  
+* a __random__ classifier has $$\mathcal{A}=\frac{1}{2}$$.
+
+
+$$
+g(x,\Lambda) = \Bigg\{ \begin{matrix} 1 \quad \text{ if } x \geq \Lambda \\  0 \quad \text{ if } x < \Lambda \end{matrix}
+$$
+
+$$
+T_p(\Lambda) =  N_p \int\limits_{\Lambda}^{\infty}  dx \ \rho_p(x) \\
+F_p(\Lambda) = N_n \int\limits_{\Lambda}^{\infty}  dx \ \rho_n(x) \\
+T_n(\Lambda) = N_n \int\limits_{-\infty}^{\Lambda} dx \ \rho_n(x) \\
+F_n(\Lambda) = N_p \int\limits_{-\infty}^{\Lambda} dx \ \rho_p(x) 
+$$
 
 <center>
 <img src="/assets/img/binary_classifier.png"
@@ -181,12 +214,23 @@ Let us now consider the density given by,
      height = "50%"/>
 </center>
 <center>
-<b>Figure 1: </b> A schematic of the true negative and true positive distributions.
+<b>Figure 2: </b> A schematic of the true negative and true positive distributions.
 </center>
 
+
+we would like to know how distiguishable is a point $$x \in \rho_n(x)$$ from $$x \in \rho_p(x)$$.
+
 $$
-\rho(x) = T_p(t)F_p(t)
+\mathcal{A}  = \int \limits_{\infty}^{-\infty} \ T_p(\Lambda) dF_p(\Lambda) \\
+  = -\int \limits_{-\infty}^{\infty} d\Lambda \ T_p(\Lambda) \frac{dF_p}{d\Lambda}(\Lambda) \\
+  = N_n \int \limits_{-\infty}^{\infty} d\Lambda \ T_p(\Lambda) \rho_n(\Lambda) \\
+  = N_n N_p \int \limits_{-\infty}^{\infty} d\Lambda \ \rho_n(\Lambda) \int \limits_{\Lambda}^{\infty} dx \ \rho_p(x)  \\
+  = N_n N_p \int \limits_{-\infty}^{\infty} d\Lambda \ \rho_n(\Lambda) \int \limits_{-\infty}^{\infty} dx \  \theta(x-\Lambda)\rho_p(x)  \\
+  = N_n N_p \int \limits_{-\infty}^{\infty} dx' \ \int \limits_{-\infty}^{\infty} dx \ \theta(x-x')\rho_p(x) \rho_n(x') \\
+  = P( \rho_p(x) > \rho_n(x) |x\in T_p)
 $$
+
+
 
 
 # Connection between Accuracy, Recall and Precision
