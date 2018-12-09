@@ -187,24 +187,29 @@ a classifier that depends on a parameter $$\Lambda$$.
 </center>
 
 The area $$\mathcal{A}$$ of the ROC curve can be interpreted as the probability that a random sample $$x$$ such that
-$$x \in P$$ will be classified as a True positive, compared to a False Positive.
-
- satisfies the following properties,
+$$x \in P$$ will be classified as a True positive, compared to a False Positive. The area also satisfies the following properties,
 
 * a __perfect__ classifier would have $$\mathcal{A}=1$$,  
 * a __terrible__ classifier has $$\mathcal{A}=0$$,  
 * a __random__ classifier has $$\mathcal{A}=\frac{1}{2}$$.
 
+### Mathematical Details
+
+Let us suppose that we have a classifier $$g$$ such that,
 
 $$
 g(x,\Lambda) = \Bigg\{ \begin{matrix} 1 \quad \text{ if } x \geq \Lambda \\  0 \quad \text{ if } x < \Lambda \end{matrix}
 $$
 
+for a given $$x$$ and $$\Lambda$$. In addition, there exists distributions $$\rho_p(x)$$ and $$\rho_n(x)$$ that represent the 
+true positive distribution and true negative distributions, respectively, that we are trying to distinguish with our classifier $$g(x,\Lambda)$$.
+With this classifier, we have the following values for the confusion matrix $$C$$
+
 $$
-T_p(\Lambda) =  N_p \int\limits_{\Lambda}^{\infty}  dx \ \rho_p(x) \\
-F_p(\Lambda) = N_n \int\limits_{\Lambda}^{\infty}  dx \ \rho_n(x) \\
-T_n(\Lambda) = N_n \int\limits_{-\infty}^{\Lambda} dx \ \rho_n(x) \\
-F_n(\Lambda) = N_p \int\limits_{-\infty}^{\Lambda} dx \ \rho_p(x) 
+T_p(\Lambda) =  N_p \int\limits_{\Lambda}^{\infty}  dx \ \rho_p(x), \\
+F_p(\Lambda) = N_n \int\limits_{\Lambda}^{\infty}  dx \ \rho_n(x), \\
+T_n(\Lambda) = N_n \int\limits_{-\infty}^{\Lambda} dx \ \rho_n(x), \\
+F_n(\Lambda) = N_p \int\limits_{-\infty}^{\Lambda} dx \ \rho_p(x). 
 $$
 
 <center>
@@ -217,9 +222,8 @@ $$
 <b>Figure 2: </b> A schematic of the true negative and true positive distributions.
 </center>
 
-
-we would like to know how distiguishable is a point $$x \in \rho_n(x)$$ from $$x \in \rho_p(x)$$.
-
+With these definitions, let us now compute the area of the ROC, $$\mathcal{A}$$. Note that since as $$\Lamdbda \rightarrow \infty$$, then $$T_p \rightarrow 0$$, and
+so we compute the area with the limits ranging from $$ \infty < dF_p < -\infty$$,
 $$
 \mathcal{A}  = \int \limits_{\infty}^{-\infty} \ T_p(\Lambda) dF_p(\Lambda) \\
   = -\int \limits_{-\infty}^{\infty} d\Lambda \ T_p(\Lambda) \frac{dF_p}{d\Lambda}(\Lambda) \\
