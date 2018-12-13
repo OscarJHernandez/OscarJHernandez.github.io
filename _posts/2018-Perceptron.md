@@ -1,6 +1,6 @@
 ---
 layout: resume
-title:  "Machine Learning Notes"
+title:  "The Perceptron Notes"
 date:   2018-11-20 00:00:00
 categories: jekyll
 ---

@@ -203,7 +203,7 @@ $$
 
 for a given $$x$$ and $$\Lambda$$. In addition, there exists distributions $$\rho_p(x)$$ and $$\rho_n(x)$$ that represent the 
 true positive distribution and true negative distributions, respectively, that we are trying to distinguish with our classifier $$g(x,\Lambda)$$.
-With this classifier, we have the following values for the confusion matrix $$C$$
+With this classifier, we have the following values for the confusion matrix $$C$$,
 
 $$
 T_p(\Lambda) =  N_p \int\limits_{\Lambda}^{\infty}  dx \ \rho_p(x), \\
@@ -211,6 +211,8 @@ F_p(\Lambda) = N_n \int\limits_{\Lambda}^{\infty}  dx \ \rho_n(x), \\
 T_n(\Lambda) = N_n \int\limits_{-\infty}^{\Lambda} dx \ \rho_n(x), \\
 F_n(\Lambda) = N_p \int\limits_{-\infty}^{\Lambda} dx \ \rho_p(x). 
 $$
+
+In Fig 2, the solid blue area represents the $$T_p(\Lambda)$$ value, while the red area is the $$F_p(\Lambda)$$ values.
 
 <center>
 <img src="/assets/img/binary_classifier.png"
@@ -222,8 +224,9 @@ $$
 <b>Figure 2: </b> A schematic of the true negative and true positive distributions.
 </center>
 
-With these definitions, let us now compute the area of the ROC, $$\mathcal{A}$$. Note that since as $$\Lamdbda \rightarrow \infty$$, then $$T_p \rightarrow 0$$, and
+With these definitions, let us now compute the area of the ROC, $$\mathcal{A}$$. Note that since as $$\Lambda \rightarrow \infty$$, then $$T_p \rightarrow 0$$, and
 so we compute the area with the limits ranging from $$ \infty < dF_p < -\infty$$,
+
 $$
 \mathcal{A}  = \int \limits_{\infty}^{-\infty} \ T_p(\Lambda) dF_p(\Lambda) \\
   = -\int \limits_{-\infty}^{\infty} d\Lambda \ T_p(\Lambda) \frac{dF_p}{d\Lambda}(\Lambda) \\
