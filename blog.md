@@ -13,7 +13,11 @@ permalink: /blog/
 <hr />
 
 
-# Featured Posts  
+# Featured Posts
+
+## Data Science Projects       
+[Automotive Sentiment Analysis](_posts/2018-12-24-twitter_automotive_sentiment_analysis.md/#about)  
+[Time Series with Neural Networks]()  
 
 ## Statistics and Probability Notes
 [Probability Calculus and Bayes Theorem](_posts/2018-12-06-Probability_Calculus.md/#about)
