@@ -58,36 +58,47 @@ The ratings of the Amazon and yelp reviews were on a scale of 1-5 and there were
 in each category.
 
 ```
+================================================================
 Raw reviews: 
 1-Star reviews: 2421
 2-Star reviews: 3259
 3-Star reviews: 7951
 4-Star reviews: 57340
 5-Star reviews: 47592
+================================================================
 ```
 
 After balacing the data set, we have the following distribution of reviews,
 Therefore, using pandas, we were able to balace the reviews giving us the following distribution
 
 ```
+================================================================
 Balaced reviews: 
 1-Star reviews: 2421
 2-Star reviews: 2421
 3-Star reviews: 2421
 4-Star reviews: 2421
 5-Star reviews: 2421
+================================================================
 ```
-After balacing the data set
+After balacing the data set the tweets are cleaned up using the 
+**clean_up_text(text)** function. This function would remove punctuations,
+numbers, captitalization.
+
+After this process is complete,
 
 
 
+
+The final results for the random baseline model, along with the 
+Naive Bayes and Logistic regression model are shown below,
 
 ```
 ================================================================
 
-Train data set size:  2800 
+Train data set size:  7747 
 
-Test data set size:  560 
+Test data set size:  1937 
 
 ================================================================
 
@@ -104,45 +115,24 @@ avg / total       0.52      0.52      0.52       560
 Naive Bayes: 
               precision    recall  f1-score   support
 
-         -1       0.87      0.77      0.82       283
-          1       0.79      0.88      0.83       277
+         -1       0.80      0.84      0.82       954
+          1       0.84      0.79      0.81       983
 
-avg / total       0.83      0.83      0.83       560
-
-================================================================
-
-Desicion Tree: 
-              precision    recall  f1-score   support
-
-         -1       0.74      0.71      0.72       283
-          1       0.71      0.74      0.73       277
-
-avg / total       0.73      0.72      0.72       560
-
-================================================================
-
-Random Forests: 
-              precision    recall  f1-score   support
-
-         -1       0.81      0.81      0.81       283
-          1       0.80      0.80      0.80       277
-
-avg / total       0.81      0.81      0.81       560
+avg / total       0.82      0.82      0.82      1937
 
 ================================================================
 
 Logistic Regression: 
               precision    recall  f1-score   support
 
-         -1       0.88      0.84      0.86       283
-          1       0.85      0.89      0.87       277
+         -1       0.82      0.88      0.85       954
+          1       0.87      0.82      0.84       983
 
-avg / total       0.87      0.86      0.86       560
+avg / total       0.85      0.85      0.85      1937
 
 ================================================================
 ```
-
-Of these models, the Logistic regression and Naive Bayes does the best, so we choose these as our two Sentiment models.
+For our model, we used 
 
 
 # 2. Data collection
