@@ -12,7 +12,7 @@ it is critical for these types of businesses to monitor and protect their reputa
 to monitor the information that customers are tweeting about businesses.
 
 In this blog post, we outline the process building the sentiment classification model, data collection processing and storage,
-topic modelling, and finally we give the results of our analysis.
+topic modelling and finally we give the results of our analysis.
 
 # Contents
 
@@ -29,7 +29,7 @@ c. Topic Modelling (examples)
 3. [**Results**](#3-results)  
 a. Overall Sentiments for Top Car brands  
 b. Sentiment Time series vs Stock Price  
-c. Clustering and Visualizations
+c. Linear Model Fit
 
 
 
@@ -41,6 +41,45 @@ The data sets that we used were:
 1. reviews_Automotive_5.json
 2. reviews_Office_Products_5.json
 3. yelp.csv
+4. training.1600000.processed.noemoticon.csv
+
+From these various data sets, we read in and processed the **review** and **rating** categories. 
+
+```
+---------------------------------------------
+Total Yelp reviews:  10000
+Total Amazon automotive reviews:  20473
+Total Amazon office reviews:  53258
+Total Twitter Data reviews:  70000
+---------------------------------------------
+```
+
+The ratings of the Amazon and yelp reviews were on a scale of 1-5 and there were different amounts
+in each category.
+
+```
+Raw reviews: 
+1-Star reviews: 2421
+2-Star reviews: 3259
+3-Star reviews: 7951
+4-Star reviews: 57340
+5-Star reviews: 47592
+```
+
+After balacing the data set, we have the following distribution of reviews,
+Therefore, using pandas, we were able to balace the reviews giving us the following distribution
+
+```
+Balaced reviews: 
+1-Star reviews: 2421
+2-Star reviews: 2421
+3-Star reviews: 2421
+4-Star reviews: 2421
+5-Star reviews: 2421
+```
+After balacing the data set
+
+
 
 
 ```
@@ -107,7 +146,8 @@ Of these models, the Logistic regression and Naive Bayes does the best, so we ch
 
 
 # 2. Data collection
-In order to collect twitter 
+In order to collect twitter an AWS EC2 instance was set up to collect the data. 
+
 
 ## c. Topic modelling
 
