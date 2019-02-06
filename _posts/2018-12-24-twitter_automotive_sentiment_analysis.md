@@ -83,7 +83,7 @@ Balaced reviews:
 ```
 After balacing the data set the tweets are cleaned up using the 
 **clean_up_text(text)** function. This function would remove punctuations,
-numbers, captitalization.
+numbers, captitalization, and other 
 
 After this process is complete,
 
