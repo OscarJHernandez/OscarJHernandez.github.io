@@ -29,20 +29,30 @@ categories: jekyll
 
 # Sentiment analysis of automotive Tweets
 
-The automotive industry is a multi-buillion dollar company relying on postive business-client relations. With so much money at stake, 
-it is critical for these types of businesses to monitor and protect their reputation. One way of obtaining live data about is to use Twitter
-to monitor the information that customers are tweeting about businesses.
+The automotive industry is a multi-buillion dollar company relying on postive business-client relations. With so much at stake, 
+it is critical for these types of businesses to monitor and protect their online reputation. 
+One way of obtaining live social media data about companies is to use Twitter
+to monitor live tweets to understand the sentiment of their customers. Furthermore, it is plausible that 
+these sentiments may impact the stock of the company.
 
-In this blog post, we outline the process building the sentiment classification model, data collection processing and storage,
-topic modelling and finally we give the results of our analysis.
+In this blog post, we outline the methodology that we used to build a machine learning sentiment classification model,
+as well as the infrastructure to collect, process and store live twitter data. This was followed by
+some exploratory data analysis where we used topic modelling to filter irrelevant topics. Finally we use the CAP model
+to study the possible influence of the twitter sentiment signals calculated by the machine learning model on the return
+of the stocks and give the results of our analysis.
+
+The focus of this post is to outline the mathematical and statistical analysis methods, aswell as to set up the computational infrastructure
+needed to undertake such a study of tweet sentiments and financial returns. In a follow up post, we will focus on the analysis of
+a large data set to robustly quantify and analyse the trends observed in this preliminary project.
 
 # Contents
 
 1. [**Sentiment analysis model**](#sentiment-analysis-model)  
+a. [The Threshold of the Ensemble model](#model-threshold)
 
 2. [**Data collection and cleaning**](#data-collection-and-cleaning)    
 
-3. [**Results**](#results)  
+3. [**Preliminary Results**](#preliminary-results)  
 a. [Combining the sentiment curves](#combining-the-sentiment-curves)   
 b. [Analysing stock returns and sentiment signals](#analysing-stock-returns-and-sentiment-signals)      
 c. [Posteriors of the correlations](#posteriors-of-the-correlations)
@@ -72,30 +82,37 @@ While more sophisticated sentiment classifier models exist, we chose to use thes
 <figure>
     <img src="/assets/img/model_metrics.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: Training metrics.
+    <figcaption class="center">Fig. 1: Training metrics for different classifiers.
     </figcaption>
 </figure>
 
+## Model Threshold 
 
-Once these two models were trained, the final model that we used consisted of an ensemble of the LR, NB and pre-built textblob classifiers. 
-The final output of the model was the sentiment that corresponded to the classifier that had the greatest confidence in the result that was also larger than the threshold value T that was used as input. This threshold value would be varied from 0 (indicating that the models could give predictions with 0% confidence in their values),
+Once the two models were trained, the final model that we used consisted of an ensemble of the __LR, NB__ and 
+pre-built __textblob__
+ classifiers. The final output of the model was the sentiment that corresponded to the classifier 
+ that had the greatest confidence in the result that was also larger than the threshold value $$T$$ 
+ that was used as input. 
+ 
+This threshold value would be varied from 0 (indicating that the models could give predictions with 0% confidence in their values),
  up to the value 1 (where the model was only allowed to give a prediction if it was 100% confident in its predictions). 
  
  <figure>
     <img src="/assets/img/true_positives_ensemble_model.png" width="40%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: Percentage of identified true positive and false positive results for the ensemble model for
-    different thresholds.
+    <figcaption class="center">Fig. 2: Percentage of identified true positive and false positive results for the ensemble model for
+    different thresholds on a testing data set.
     </figcaption>
 </figure>
 
-
+In the Figure above, we observe that as the threshold increases, the number of tweets correctly identified as positive increases
+while the false positives decrease as expected.
 
 # Data collection and cleaning  
 
-With the model now in place, the next step of the project was to collect data from twitter based on keywords that are related 
-to the car brands that we were examining. For this task we used the [twython library](https://twython.readthedocs.io/en/latest/) that
- allowed us the ability to listen to the live twitter feed based on the keywords that we used. 
+With the model now in place, the next step of the project was to collect data from twitter based on keywords related 
+to the car brands that we were examining. For this task we used the [twython library](https://twython.readthedocs.io/en/latest/) this
+ allowed us to listen to live twitter feed based on the keywords that we used. 
  
 An [AWS EC2](https://aws.amazon.com/ec2/) server was used to collect all of these tweets into an [SQLite database](https://www.sqlite.org/index.html). Once the twitter data was collected the database was 
 downloaded and the text was processed as follows:
@@ -110,16 +127,18 @@ downloaded and the text was processed as follows:
 * text was lemmatized. 
 
 We also removed duplicates from the data set. For any days where we had missing data, such as weekends for the stock market returns, 
-the median of the data was used to fill the missing points. The histogram of the tweet length before the preprocessing steps is given in the figure below
+the median of the data was used to fill the missing points. The histogram of the tweet length before the preprocessing steps is given
+ in the figure below
 
 <figure>
     <img src="/assets/img/raw_tweet_length.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: Histogram of tweet length in the data set before data cleaning.
+    <figcaption class="center">Fig. 3: Histogram of tweet length in the data set before data cleaning.
     </figcaption>
 </figure>
 
 <br>
+Many of the tweets contained URLS which caused the tweet length to be around the 140 character limit.
 After processing the tweets and removing duplicates the histogram looks more Gaussian,
 <br>
 
@@ -132,11 +151,17 @@ After processing the tweets and removing duplicates the histogram looks more Gau
 
 
 Another issue in the data set was that for specific car brands, 
-their tweets contained many things not related to cars at all. To try to filter out irrelevant tweets, we used [topic modelling](https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24)
- on the database, with an optimal value for the __“number of topics”__ parameter in the prebuilt (latent dirichlet allocation or non-negative matrix factorization (NNM)) 
-functions that we tried. This optimal number of topics model was determined by finding the number of topics $$(k)$$ that maximized the average cohesion score for all 
-sub-topics (0 to 1). The cohesion function acts on a string by computing the average cosine similarity score ([using a prebuilt word embedding model from spacy **'en_core_web_lg'**](https://spacy.io/)) 
-for all pairs of words in that string. 
+their tweets contained many things not related to cars at all. To try to filter out irrelevant tweets, we used 
+[topic modelling](https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24)
+ on the database, with an optimal value for the __“number of topics”__ parameter in the prebuilt 
+ (latent dirichlet allocation or non-negative matrix factorization (NNM)) 
+functions that we tried. This optimal number of topics model was determined by finding the number of topics $$(k)$$ that 
+maximized the average cohesion score for the top $$m$$ ranked words that describe a specific topic. 
+The cohesion function acts on a string by computing the average cosine similarity score 
+([using a prebuilt word embedding model from spacy **'en_core_web_lg'**](https://spacy.io/)) 
+for all pairs of words in that string.
+
+The python function which computes this string cohesion score is given below,
 
 {% highlight python linenos %}
 def string_cohesion(vec):
@@ -172,36 +197,43 @@ def string_cohesion(vec):
 	return s
 {% endhighlight %}
  
-We used this method to find specific topics in the twitter data base that did not have anything to do with cars, for example some car tweets were related to people warning each other about police chasing a  criminal in a specific vehicle.
+We used this method to find specific topics in the twitter database that did not have anything to do with cars, 
+for example some car tweets were related to people warning each other about police chasing a criminal in a specific vehicle.
 
-# Results
+# Preliminary Results
 
-Finally after building the model, creating the AWS server to collect the tweets, and cleaning the data 
-can conduct the analysis. Using SQL queries, we processed the tweets of specific car brands day-by-day 
-for the two-week period using different model thresholds. These day-by-day sentiment 
-of the tweets is shown below for Tesla,
+Finally after building the model, creating the AWS server to collect the tweets and cleaning the database, we
+are now in a position to conduct the statistical analysis. Using appropriate SQL queries, 
+we processed the tweets of specific car brands on a day-by-day basis 
+for the two-week period using different model thresholds. These day-by-day sentiments 
+of the tweets are shown below for Tesla,
 
 <figure>
     <img src="/assets/img/Tesla_model_pos_threshold_variation.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: The day-by-day positive sentiment time series for Tesla for various thresholds, in terms of the 
+    <figcaption class="center">Fig. 5: The day-by-day positive sentiment time series for Tesla for various thresholds, in terms of the 
     total percentage of the daily tweets.
     </figcaption>
 </figure>
 
-In the Figure above we see that appears to be a spike around August 8th for tesla, but as the models prediction certainty 
-threshold value ($$T$$) increases, which the strengths of these spikes shrinks. We observe that the percentages of positive or negative 
-tweets drops as we increase the certainty threshold of the model. 
+The $$y$$-axis represents the number of tweets related to Tesla, that were identified as being "positive" for a given day
+in the data set. 
+We see that there is a spike around August 8th for $$T=0$$. However, as the models prediction certainty 
+threshold value ($$T$$) is increased, the strengths of these spikes shrinks. We also see that the baseline
+number of positively identified tweets decreases as we increase the certainty threshold of the model. 
 
 ## Combining the sentiment curves
 
-In Fig XXX we observe that there are specific peaks in these sentiment curves that do not dissapear when you increase the certainty threshold. 
-These are the signals that we want to extract from the data. However, we notice that the curves for different $$T$$ values have vastly different scales, 
+In Fig. 5 we observed that there are specific peaks in thesentiment curves that do not dissapear when the certainty threshold is increased.
+For example, at August 6th, there is a small consistent bump for all thresholds, intuitively, this should mean that this bump may be more important 
+than other signals. These are the signals that we want to extract from the data. 
+However, the curves for different $$T$$ values have vastly different scales, 
 the scale for the $$T=0$$ curves are around 30%, while for $$T$$=0.8 it's more like 3%. 
 
-Another problem that we need to consider is that not all of the curves are to be taken with the same level of confidence. 
+Another problem is that not all of the curves are to be taken with the same level of trust. Clearly the values with $$T=0$$ should
+be trusted less than high $$T$$ values. But how do we quantify our level of trust in the predictions for a given $$T$$?
 
-So now we are faced with two problems that we need to solve:
+So we are faced with two problems that we need to solve:
 
 * __Is it possible to remove the scale associated with the different thresholds?__
 * __Once we have similarly scales data, how can we combine the different curves together to get unique signal?__   
@@ -216,7 +248,7 @@ $$
 
 for the positive and negative sentiment signals, where $$x_t$$ represents the day, and $$T$$ the threshold.
 
-Now we need to know how to combine them. The solution to this inspired by Bayesian statistics. The positive and negative sentiment 
+Now we need to know how to combine them. The solution to this is inspired by Bayesian statistics. The positive and negative sentiment 
 curves for different thresholds are combined into a final true positive and false positive curves, denoted $$P(x_t)$$
 and $$\tilde{P}(x_t)$$, respectively, are
 
@@ -239,9 +271,9 @@ $$
 \\ W_{FP}(T) = P(\hat{y}=1|y=-1,T)P(y=-1|T)P(T). \\
 $$
 
-Here, the symbol $$\hat{y}$$ represents the estimate of the sentiment from the model, $$y$$ is the true sentiment value. Therefore, 
+Here, the symbol $$\hat{y}$$ represents the estimate of the sentiment from the model, and $$y$$ is the true sentiment value. Therefore, 
 $$P(\hat{y}=1|y=1,T)$$ indicates the true positive probability, $$P(y=1|T)$$ is the prior probability of positive tweets, and $$P(T)$$
-is the prior distribution for the threshold. 
+is the prior distribution for the threshold. (This last prior is taken to be a uniform distribution for simplicity)
 
 Similar expressions hold for the true negative, and false negative sentiment signals. For the incoming 
 automotive tweets, we do not know the true accuracies for positive and negative sentiments but we will make the assumption that the scores 
@@ -253,8 +285,8 @@ then we would expect our model to generalize and this assumption should be appro
 <figure>
     <img src="/assets/img/Pos_signal_weight.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: The negative sentiment time series for Tesla. The dark/light red band 
-    indicate the estimated True negative/ False Negative signals, respectively.
+    <figcaption class="center">Fig. 6: The positive signal weight for the model. The dark/light green bands 
+    indicate the estimated weigths for the True positive/ False positive signals, respectively.
     </figcaption>
 </figure>
 
@@ -263,22 +295,36 @@ then we would expect our model to generalize and this assumption should be appro
 <figure>
     <img src="/assets/img/Neg_signal_weight.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: The positive sentiment time series for Tesla. The dark/light green band 
-    indicate the estimated True negative/ False Negative signals, respectively.
+    <figcaption class="center">Fig. 7: The negative signal weight for the model. The dark/light red bands
+    indicate the estimated weigths for the True negative/ False Negative signals, respectively. 
     </figcaption>
 </figure>
 
 <br>
 <br>
-Using the Bayesian weighting average formula that we found earlier, we obtain our normalized positive and 
-negative sentiment signals.
+
+First, we note that the $$y$$-axis in Figs. 6 and 7 are unitless.
+
+Fig. 6 shows us that as the threshold value $$T$$ increases, the positive sentiment time series prediction, $$\text{Pos}(x_t,T)$$,
+for that threshold is weighted more heavily (should be taken more seriously).  
+
+in contrast, Fig. 7 shows us that as the threshold value $$T$$ increases, the negative sentiment time series prediction, $$\text{Neg}(x_t,T)$$,
+for that threshold is weighted much less.
+
+This tells us that our ensemble model is not very good at making confident predictions
+about negative sentiment tweets, but it does seem to be very good at understanding which tweets are certainly positive. Therefore when combining 
+predictions for different thresholds, it takes high confidence positive sentiment signals with more weight, while ignoring 
+the high confidence negative sentiment signals. 
+
+Finally, using the Bayesian weighting average formula that we found earlier, we calculate our normalized positive and 
+negative sentiment signals. The one for Tesla is shown below,
 <br>
 <br>
 
 <figure>
     <img src="/assets/img/Normed_pos_signal.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: The positive sentiment time series for Tesla. The dark/light green band 
+    <figcaption class="center">Fig. 8: The positive sentiment time series for Tesla. The dark/light green band 
     indicate the estimated True negative/ False Negative signals, respectively.
     </figcaption>
 </figure>
@@ -286,7 +332,7 @@ negative sentiment signals.
 <figure>
     <img src="/assets/img/Normed_neg_signal.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: The negative sentiment time series for Tesla. The dark/light red band 
+    <figcaption class="center">Fig. 9: The negative sentiment time series for Tesla. The dark/light red band 
     indicate the estimated True negative/ False Negative signals, respectively.
     </figcaption>
 </figure>
@@ -352,17 +398,16 @@ $$\beta_P$$ for Tesla is shown below,
 <figure>
     <img src="/assets/img/tesla_bP_coeff.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: A summary of the correlations values found over the investigated time
+    <figcaption class="center">Fig. 10: The posterior distribution for the positive sentiment signal correlation coefficient.
     period
     </figcaption>
 </figure>
 
-This figure shows the medeian values as well as the 68%, and 95% confidence intervals. 
-These confidence intervals demonstrate the advantage of using the Bayesian linear regression. 
-
+Fig. 10 shows the median value for $$\beta_P$$ of the model as well as the 68%, and 96% confidence intervals. 
+These confidence intervals demonstrate the advantage of using the Bayesian linear regression to quantify uncertainty. 
 
 From this plot we see that the mean value of the fit is a positive value that excludes zero at the 68% confidence level,
- but clearly we don't have enough statistical power to exclude 0 at the 95% confidence level.
+ but clearly from our small data set we don't have enough statistical power to exclude 0 at the 96% confidence level.
 
 Next, we would like to calculate the posterior distributions of the correlation coefficients between the sentiment signals and the returns of the stock.
 
@@ -371,7 +416,7 @@ A summary of the correlations that we found is given below,
 <figure>
     <img src="/assets/img/correlation_diagram.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: A summary of the correlation values found over the investigated time
+    <figcaption class="center">Fig. 11: A summary of the correlation values found over the investigated time
     period. Green ovals indicate positive association, red is negative, orange circle indicates no correlation.
     </figcaption>
 </figure>
@@ -410,7 +455,7 @@ where $$N$$ is the number of data points. Here $$\bar{x}$$ and $$\bar{y}$$ are t
 <figure>
     <img src="/assets/img/correlation_posterior.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: The posterior distribution of the Perasons correlation between positive sentiment 
+    <figcaption class="center">Fig. 12: The posterior distribution of the Perasons correlation between positive sentiment 
     and the stock return for Tesla. 
     </figcaption>
 </figure>
@@ -423,14 +468,16 @@ we found in the previous section.
 <figure>
     <img src="/assets/img/correlation_values.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: A summary of the Pearsons correlation values found over the investigated time
+    <figcaption class="center">Fig. 13: A summary of the Pearsons correlation values found over the investigated time
     period.
     </figcaption>
 </figure>
 
 # Conclusions and further work
 In this article, we focused more on the mathematical details and the data analysis methodology that was built with python that allowed us
- to carry out the end-to-end data science project. The main limitation of our work was the small data set that was used to compute the correlations. 
+ to carry out the end-to-end data science project. 
+ The main limitation of our work was the small data set that was used to compute the correlations. We found correlations at the 68%
+ confidence level, but they may yet be excluded at the 96% confidence region. 
 However this proof-of-principle project produced potentially interesting results. In the next upcoming blog post, we will use a much larger data set, 
 with several months worth of data to more rigorously study the model proposed here. In that upcoming post we will study in detail the following effects:
 * __How does the sentiment correlations change as a function of time?__  
