@@ -29,7 +29,7 @@ categories: other
 
 # Predicting Time Series with Neural Networks
 
-Time series arise in many different domains, for example, as Financial time series. In this project we investigate if
+Time series arise in many different domains, for example, as financial time series. In this project we investigate if
  we can use modern machine learning algorithms to predict time series and furthermore, 
 can we make estimates of the uncertainty in these predictions?
 
