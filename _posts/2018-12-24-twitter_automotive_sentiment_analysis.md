@@ -450,7 +450,16 @@ s^2_{x} = \frac{1}{N-1}\sum\limits_{i}^{N} (x_i-\bar{x})^2, \\
 s^2_{y} = \frac{1}{N-1}\sum\limits_{i}^{N} (y_i-\bar{y})^2. 
 $$
 
-where $$N$$ is the number of data points. Here $$\bar{x}$$ and $$\bar{y}$$ are the mean values of the time series.
+where $$N$$ is the number of data points. Here $$\bar{x}$$ and $$\bar{y}$$ are the mean values of the time series. The 
+correlation coefficients that we wish to investigate are
+
+$$
+\rho(M,r) = \text{ The correlation coefficient between the market return and the stock return of the brand} \\
+\rho(P,r) = \text{ The correlation coefficient between the positive sentiment signal and the stock return of the brand}\\
+\rho(N,r) = \text{ The correlation coefficient between the negative sentiment signal and the stock return of the brand}
+$$
+
+The posterior distribution of $$\rho(P,r)$$ for Tesla is shown in Fig. 12 below
 
 <figure>
     <img src="/assets/img/correlation_posterior.png" width="70%" class="center"
@@ -461,8 +470,10 @@ where $$N$$ is the number of data points. Here $$\bar{x}$$ and $$\bar{y}$$ are t
 </figure>
 
 <br>
-Finally we summarize the median values of the correlations that we found which numerically quantify the relations that 
-we found in the previous section.
+Fig 12. shows us that there is a maximum correlation coefficient that is possible for the data set, at around -0.7 for Tesla,
+and most of the distribution is centered around a negative value as we found before from the $$\beta_P$$ value in Fig. 10.
+
+Finally we summarize the median values of all correlations that we found that numerically quantify the relations in Fig. 11.
 <br>
 
 <figure>
@@ -472,6 +483,9 @@ we found in the previous section.
     period.
     </figcaption>
 </figure>
+
+
+
 
 # Conclusions and further work
 In this article, we focused more on the mathematical details and the data analysis methodology that was built with python that allowed us
