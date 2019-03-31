@@ -31,17 +31,18 @@ categories: other
 
 The automotive industry is a multi-billion dollar company relying on positive business-client relations. With so much at stake, 
 it is critical for these types of businesses to monitor and protect their online reputation. 
-One way of obtaining live social media data about companies is to use Twitter
-to monitor live tweets to understand the sentiment of their customers. Furthermore, it is plausible that 
-these sentiments may impact the stock of the company.
+One way of obtaining live social media data about companies is to monitor live Twitter data
+and use the machine learning models to calculate the sentiment of the tweets. It has been shown in other
+work that in fact [the sentiment of these tweets is correlated to the movement of the stock market.](https://ieeexplore.ieee.org/document/7955659)
 
-In this blog post, we outline the methodology that we used to build a machine learning sentiment classification model,
+In this blog post, we outline the methodology that was used to build a machine learning sentiment classification model,
 as well as the infrastructure to collect, process and store live twitter data. This was followed by
-some exploratory data analysis where we used topic modeling to filter irrelevant topics. Finally we use the CAP model
+some exploratory data analysis where we used topic modeling to filter irrelevant topics. Finally we used the CAP model
 to study the possible influence of the twitter sentiment signals calculated by the machine learning model on the return
-of the stocks and give the results of our analysis.
+of the stocks and provide the results of the analysis.
 
-The focus of this post is to outline the mathematical and statistical analysis methods, as well as to set up the computational infrastructure
+In this work five automotive brands are examined, __Tesla, Ford, Toyota, Mercedes and Porsche,__. The focus of this post is to 
+outline the mathematical and statistical analysis methods, as well as to set up the computational infrastructure
 needed to undertake such a study of tweet sentiments and financial returns. In a follow up post, we will focus on the analysis of
 a large data set to robustly quantify and analyse the trends observed in this work.
 
@@ -62,11 +63,12 @@ c. [Posteriors of the correlations](#posteriors-of-the-correlations)
 
 # Sentiment Analysis Model
 The natural language model that we used in this project was the __Bag-of-words model (BOW)__. 
-Using a large corpus of documents, the frequency of all occurring words is analysed and ranked according to the frequently occurring words. 
+Using a large corpus of documents, the frequency of all occurring words is analysed and ranked according to their frequency. 
 Then a function is used that maps a given sentence to a vector representing the occurrence of words from the vocabulary in the sentence.  
  
-More sophisticated language models exist on the market, however as shown in [Ref. 1](https://cs.stanford.edu/people/alecmgo/papers/TwitterDistantSupervision09.pdf), this simple BOW model is already capable of achieving about an 80%
- accuracy in sentiment identification problems, making it a good initial model for this pilot study.
+More sophisticated language models exist on the market, however as shown in [Ref. 1](https://cs.stanford.edu/people/alecmgo/papers/TwitterDistantSupervision09.pdf), 
+the simple BOW model is already capable of achieving about an 80% accuracy in sentiment 
+identification problems, making it a good initial model for this pilot study.
 
 Based on this __BOW__ model, we generated feature vectors of all corpus in the training set that consisted of __amazon reviews__, __yelp reviews__, 
 and the __sentiment140__ data set. These feature vectors and their corresponding labels were used to train two machine learning binary classifier models,
@@ -76,13 +78,15 @@ While more sophisticated sentiment classifier models exist, we chose to use thes
  probabilities in their categorizations that we will use as uncertainty estimates and it was indicated by [Max Margenot](https://www.quantopian.com/posts/learn-how-to-build-a-model-in-python-to-analyze-sentiment-from-twitter-data) that a sentiment
   classifier model based on __logistic regression__ method achieved about a 78% accuracy, while a more sophisticated __LSTM neural network__ scored 
   about 81.5% on the sentiment140 dataset and took significantly longer to train.
- This indicated to us that the __NB__ and __LR__ were sufficient.
+ This indicated that the __NB__ and __LR__ were sufficient.
 
 
 <figure>
     <img src="/assets/img/model_metrics.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 1: Training metrics for different classifiers.
+    <figcaption class="center">Fig. 1: Training metrics for different classifiers that we investigated. The baseline model chose sentiments
+    at random. The Naive Bayes and Logistic Regression classifiers scored the highest for the precision, recall and f1 scores, making them
+    the models of choice.
     </figcaption>
 </figure>
 
@@ -111,7 +115,7 @@ This threshold value would be varied from 0 (indicating that the models could gi
  <figure>
     <img src="/assets/img/true_positives_ensemble_model.png" width="40%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 2: Percentage of identified true positive and false positive results for the ensemble model for
+    <figcaption class="center">Fig. 2: Fraction of identified true positive and false positive results for the ensemble model for
     different thresholds on a testing data set.
     </figcaption>
 </figure>
@@ -122,8 +126,12 @@ while the false positives decrease as expected.
 # Data collection and cleaning  
 
 With the model now in place, the next step of the project was to collect data from twitter based on keywords related 
-to the car brands that we were examining. For this task we used the [twython library](https://twython.readthedocs.io/en/latest/) this
- allowed us to listen to live twitter feed based on the keywords that we used. 
+to the car brands that were examined. The keywords used in this study where
+
+* __keywords:__ daimler; BMW; mercedes benz; toyota; ford; tesla; porsche;  
+
+We used the [twython library](https://twython.readthedocs.io/en/latest/) which
+ allowed us to listen to live twitter feed based on the above keywords. 
  
 An [AWS EC2](https://aws.amazon.com/ec2/) server was used to collect all of these tweets into an [SQLite database](https://www.sqlite.org/index.html). Once the twitter data was collected the database was 
 downloaded and the text was processed as follows:
@@ -144,7 +152,7 @@ the median of the data was used to fill the missing points. The histogram of the
 <figure>
     <img src="/assets/img/raw_tweet_length.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 3: Histogram of tweet length in the data set before data cleaning.
+    <figcaption class="center">Fig. 3: Histogram of tweet character length in the data set before data cleaning.
     </figcaption>
 </figure>
 
@@ -156,17 +164,17 @@ After processing the tweets and removing duplicates the histogram looks more Gau
 <figure>
     <img src="/assets/img/filtered_tweet_length.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 4: Histogram of tweet length after data cleaning.
+    <figcaption class="center">Fig. 4: Histogram of tweet character length after data cleaning.
     </figcaption>
 </figure>
 
 
 Another issue in the data set was that for specific car brands, 
-their tweets contained many things not related to cars at all. To try to filter out irrelevant tweets, we used 
+their tweets contained many things not related to cars. To try to filter out irrelevant tweets, 
 [topic modelling](https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24)
- on the database, with an optimal value for the __“number of topics”__ parameter in the prebuilt 
+was employed on the database, with an optimal value for the __“number of topics”__ parameter in the prebuilt 
  (latent dirichlet allocation or non-negative matrix factorization (NNM)) 
-functions that we tried. This optimal number of topics model was determined by finding the number of topics $$(k)$$ that 
+functions that were used. This optimal number of topics model was determined by finding the number of topics $$(k)$$ that 
 maximized the average cohesion score for the top $$m$$ ranked words that describe a specific topic. 
 The cohesion function acts on a string by computing the average cosine similarity score 
 ([using a prebuilt word embedding model from spacy **'en_core_web_lg'**](https://spacy.io/)) 
@@ -204,11 +212,10 @@ def string_cohesion(vec):
 				if(word1.has_vector==True and word2.has_vector == True):
 					s+= word1.similarity(word2)	
 		s/=Norm**2
-	
 	return s
 {% endhighlight %}
  
-We used this method to find specific topics in the twitter database that did not have anything to do with cars, 
+This method was used to find specific topics in the twitter database that did not have to do with cars, 
 for example some car tweets were related to people warning each other about police chasing a criminal in a specific vehicle.
 
 # Preliminary Results
@@ -250,7 +257,7 @@ So we are faced with two problems that we need to solve:
 * __Once we have similarly scales data, how can we combine the different curves together to get unique signal?__   
 
 This first problem can be solved easily by __normalizing__ the data.
-We chose to do this normalization with the __Z-transform__ for each curve obtained using the different thresholds, this will
+We chose to do this normalization with the __Z-transformation__ for each curve obtained using the different thresholds, this will
 give us the set of curves  
 
 $$
@@ -271,7 +278,7 @@ $$
 \\ \tilde{P}(x_t) = \int\limits_0^1 dT \ \text{Pos}(x_t,T)W_{FP}(T). \\
 $$  
 
-where $$W_{TP}(T)$$, $$W_{FP}(T)$$ are the true-positive and false-positive weights at a given $$T$$. These weights 
+Where $$W_{TP}(T)$$, $$W_{FP}(T)$$ are the true-positive and false-positive weights at a given $$T$$. These weights 
 represent how seriously we should take a given sentiment curve into account for a specific $$T$$. Their exact expressions are
 
 $$
@@ -297,7 +304,7 @@ then we would expect our model to generalize and this assumption should be appro
     <img src="/assets/img/Pos_signal_weight.png" width="70%" class="center"
          alt="Elephant at sunset">
     <figcaption class="center">Fig. 6: The positive signal weight for the model. The dark/light green bands 
-    indicate the estimated weigths for the True positive/ False positive signals, respectively.
+    indicate the estimated weigths for the (true positive)/(false positive) signals, respectively.
     </figcaption>
 </figure>
 
@@ -307,7 +314,7 @@ then we would expect our model to generalize and this assumption should be appro
     <img src="/assets/img/Neg_signal_weight.png" width="70%" class="center"
          alt="Elephant at sunset">
     <figcaption class="center">Fig. 7: The negative signal weight for the model. The dark/light red bands
-    indicate the estimated weigths for the True negative/ False Negative signals, respectively. 
+    indicate the estimated weigths for the (true negative)/(false negative) signals, respectively. 
     </figcaption>
 </figure>
 
@@ -356,9 +363,13 @@ and the return of the stocks for specific vehicle brands.
 
 ## Analysing stock returns and sentiment signals  
 
-Now that we normalized the data and combined the curves at different thresholds together into a single sentiment signal time series, we want to study the correlation between this time-series and the stock return time series of the stock. But the next problem that we encounter is to understand: how they should be related?
+Now that we normalized the data and combined the curves at different thresholds together into a single sentiment signal time series,
+ we want to study the correlation between this time-series and the stock return time series of the stock. 
+ But the next problem that we encounter is to understand: 
 
-Thankfully was not overly complicated, [there is a financial model, known as the CAPM](https://www.investopedia.com/terms/c/capm.asp)(note we use 0 for the risk free return rate) that relates the return of an asset to the return of the market,
+* __how can we relate the sentiment signals to the return of the stock?__
+
+[There is a financial model, known as the CAPM](https://www.investopedia.com/terms/c/capm.asp)(note we use 0 for the risk free return rate) that relates the return of an asset to the return of the market,
  through a linear model. The base CAP model states that the return of a stock $r$ should be proportional to the return of the market $$r_{M}$$   
  
 $$
@@ -366,7 +377,7 @@ $$
 $$
 
 Here the constant of proportionality to the market is $$\beta_M$$, and $$\alpha$$ is a small offset, which should be zero. This base hypothesis can 
-be easily extended to include additional coefficients $$\beta_P$$ and $$\beta_N$$ factors
+be extended to include additional coefficients $$\beta_P$$ and $$\beta_N$$ factors
 that allow us to incorporate the effects of the positive and negative sentiment signals as in Figs. 8 and 9 through
 the more general [linear multifactor model](https://www.investopedia.com/terms/m/multifactor-model.asp)
 
@@ -409,8 +420,7 @@ $$\beta_P$$ for Tesla is shown below,
 <figure>
     <img src="/assets/img/tesla_bP_coeff.png" width="70%" class="center"
          alt="Elephant at sunset">
-    <figcaption class="center">Fig. 10: The posterior distribution for the positive sentiment signal correlation coefficient.
-    period
+    <figcaption class="center">Fig. 10: The posterior distribution for the positive sentiment signal coefficient.
     </figcaption>
 </figure>
 
@@ -439,13 +449,15 @@ The main findings of this table are:
 * For all vehicle brands that we looked at, the median value of $$\beta_M$$, representing the sensitivity of the market return to
 the stock return was always positive and seemed to be the strongest effect in the linear model.
 
-* The stock returns for __Tesla__ are __positively correlated__ with Negative twitter sentiments  
-* The stock returns for __Toyota and Porche__ are __positively correlated__ with Positive twitter sentiments 
+* The stock returns for __Tesla__ are __positively correlated__ with negative twitter sentiments  
 
-* The stock returns for __Tesla and Ford__ are __negatively correlated__ with Positive twitter sentiments  
-* The stock returns for __Mercedes__ are __negatively correlated__ with Negative twitter sentiments
+* The stock returns for __Toyota and Porsche__ are __positively correlated__ with positive twitter sentiments 
 
-In future work, it would be good to try to understand the underlying reasons why the sentiments are correlated the way 
+* The stock returns for __Tesla and Ford__ are __negatively correlated__ with positive twitter sentiments  
+
+* The stock returns for __Mercedes__ are __negatively correlated__ with negative twitter sentiments
+
+In future work, it would be useful to understand the underlying reasons why the sentiments are correlated the way 
 we found them here. It is counter intuitive that positive tweet sentiments are anti-correlated with the return of the 
 automotive stocks for some companies.  
 
