@@ -36,7 +36,7 @@ can we make estimates of the uncertainty in these predictions?
 
 ## Contents
 
-1. [**Metrics**](#sentiment-analysis-model)  
+1. [**Project Statement**](#project-statement)  
 
 2. [**Analysis**](#data-exploration)  
 a. [**Exploratory-Visualization**](#exploratory-visualization)    
@@ -48,7 +48,7 @@ a. [**Benchmarks**](#benchmarks)
 a. [**ARIMA Model: Implementation**](#arima-model-implementation)  
 b. [**Neural Network Model: Implementation**](#neural-network-model-implementation)
 
-4. [**Conclusions and Further Work**](#conclusions-and-further-work)
+4. [**Conclusions and Further Work**](#conclusions)
 
 
 # Project Overview
@@ -118,7 +118,7 @@ to make predictions of time series and use our baseline models and root
 mean square differences to quantify and compare the performance of
 different forecasts.
 
-# Metrics
+## Metrics
 
 There are several metrics that can be used to evaluate the predictions
 of our models Ref. [1], however, for our project we will
