@@ -398,7 +398,7 @@ Mathematically speaking we are carrying out the integrals given by
 $$
 P(\beta_P|D) \propto \int d\sigma \int d\beta_M \int d\beta_N \int d\alpha \ P(D | \alpha,\beta_N,\beta_P, \beta_M,\sigma)P(\beta_P)P(\beta_M)P(\beta_N)P(\sigma),\\
 P(\beta_M|D) \propto \int d\sigma \int d\beta_P \int d\beta_N \int d\alpha \ P(D | \alpha,\beta_N,\beta_P, \beta_M,\sigma)P(\beta_P)P(\beta_M)P(\beta_N)P(\sigma),\\
-P(\beta_N|D) \propto \int d\sigma \int d\beta_P \int d\beta_N \int d\alpha \ P(D | \alpha,\beta_N,\beta_P, \beta_M,\sigma)P(\beta_P)P(\beta_M)P(\beta_N)P(\sigma), \\
+P(\beta_N|D) \propto \int d\sigma \int d\beta_P \int d\beta_M \int d\alpha \ P(D | \alpha,\beta_N,\beta_P, \beta_M,\sigma)P(\beta_P)P(\beta_M)P(\beta_N)P(\sigma), \\
 $$
 
 
