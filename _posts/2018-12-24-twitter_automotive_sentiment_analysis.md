@@ -508,7 +508,7 @@ In this article, we focused more on the mathematical details and the data analys
  confidence level, but they may yet be excluded at the 96% confidence region. 
 However this proof-of-principle project produced potentially interesting results. In the next upcoming blog post, we will use a much larger data set, 
 with several months worth of data to more rigorously study the model proposed here. In that upcoming post we will study in detail the following effects:
-* __How does the sentiment correlations change as a function of time?__  
+* __How do the sentiment correlations change as a function of time?__  
 * __What are the results of using a sliding window approach for the correlations?__  
 * __Does changing the normalization method change the correlations? For example using a min-max scaler as opposed to the Z-transformed data?__  
 * __What are the results when we include/remove outliers in the data set?__  
