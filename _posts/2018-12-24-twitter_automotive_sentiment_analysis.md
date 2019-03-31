@@ -29,7 +29,7 @@ categories: jekyll
 
 # Sentiment analysis of automotive Tweets
 
-The automotive industry is a multi-buillion dollar company relying on postive business-client relations. With so much at stake, 
+The automotive industry is a multi-billion dollar company relying on positive business-client relations. With so much at stake, 
 it is critical for these types of businesses to monitor and protect their online reputation. 
 One way of obtaining live social media data about companies is to use Twitter
 to monitor live tweets to understand the sentiment of their customers. Furthermore, it is plausible that 
@@ -37,13 +37,13 @@ these sentiments may impact the stock of the company.
 
 In this blog post, we outline the methodology that we used to build a machine learning sentiment classification model,
 as well as the infrastructure to collect, process and store live twitter data. This was followed by
-some exploratory data analysis where we used topic modelling to filter irrelevant topics. Finally we use the CAP model
+some exploratory data analysis where we used topic modeling to filter irrelevant topics. Finally we use the CAP model
 to study the possible influence of the twitter sentiment signals calculated by the machine learning model on the return
 of the stocks and give the results of our analysis.
 
-The focus of this post is to outline the mathematical and statistical analysis methods, aswell as to set up the computational infrastructure
+The focus of this post is to outline the mathematical and statistical analysis methods, as well as to set up the computational infrastructure
 needed to undertake such a study of tweet sentiments and financial returns. In a follow up post, we will focus on the analysis of
-a large data set to robustly quantify and analyse the trends observed in this preliminary project.
+a large data set to robustly quantify and analyse the trends observed in this work.
 
 # Contents
 
@@ -62,7 +62,7 @@ c. [Posteriors of the correlations](#posteriors-of-the-correlations)
 
 # Sentiment Analysis Model
 The natural language model that we used in this project was the __Bag-of-words model (BOW)__. 
-Using a large corpus of documents, the frequency of all occurring words is analysed and ranked according to the frequently occuring words. 
+Using a large corpus of documents, the frequency of all occurring words is analysed and ranked according to the frequently occurring words. 
 Then a function is used that maps a given sentence to a vector representing the occurrence of words from the vocabulary in the sentence.  
  
 More sophisticated language models exist on the market, however as shown in [Ref. 1](https://cs.stanford.edu/people/alecmgo/papers/TwitterDistantSupervision09.pdf), this simple BOW model is already capable of achieving about an 80%
@@ -89,10 +89,21 @@ While more sophisticated sentiment classifier models exist, we chose to use thes
 ## Model Threshold 
 
 Once the two models were trained, the final model that we used consisted of an ensemble of the __LR, NB__ and 
-pre-built __textblob__
+pre-built [__textblob__](https://textblob.readthedocs.io/en/dev/quickstart.html) denoted as (__TB__)
  classifiers. The final output of the model was the sentiment that corresponded to the classifier 
  that had the greatest confidence in the result that was also larger than the threshold value $$T$$ 
- that was used as input. 
+ that was used as input. Mathematically speaking our ensemble model was
+ 
+$$
+\text{Prediction} = \text{max}\lbrace \text{Pred}(\text{LR}),\text{Pred}(\text{NB}),\text{Pred}(\text{TB}) \rbrace
+$$
+
+with the condition that
+
+$$
+\text{Prob}(\text{Prediction}) \geq T,
+$$
+ 
  
 This threshold value would be varied from 0 (indicating that the models could give predictions with 0% confidence in their values),
  up to the value 1 (where the model was only allowed to give a prediction if it was 100% confident in its predictions). 
@@ -224,7 +235,7 @@ number of positively identified tweets decreases as we increase the certainty th
 
 ## Combining the sentiment curves
 
-In Fig. 5 we observed that there are specific peaks in thesentiment curves that do not dissapear when the certainty threshold is increased.
+In Fig. 5 we observed that there are specific peaks in the sentiment curves that do not disappear when the certainty threshold is increased.
 For example, at August 6th, there is a small consistent bump for all thresholds, intuitively, this should mean that this bump may be more important 
 than other signals. These are the signals that we want to extract from the data. 
 However, the curves for different $$T$$ values have vastly different scales, 
@@ -355,22 +366,22 @@ $$
 $$
 
 Here the constant of proportionality to the market is $$\beta_M$$, and $$\alpha$$ is a small offset, which should be zero. This base hypothesis can 
-be easily extended to include additional coefficients $${\bf \beta_N}$$ and $$\beta_M$$ factors
-that allow us to incorperate the effects of the positive and negative sentiment signals that we found earlier 
+be easily extended to include additional coefficients $$\beta_P$$ and $$\beta_N$$ factors
+that allow us to incorporate the effects of the positive and negative sentiment signals as in Figs. 8 and 9 through
+the more general [linear multifactor model](https://www.investopedia.com/terms/m/multifactor-model.asp)
 
 $$
-\\ r(x_t) = \alpha + \beta_{M} r_{M}(x_t) + \beta_{N} N(x_t)  + \beta_{P} P(x_t) \\
+\\ r(x_t) = \alpha + \beta_{M} r_{M}(x_t) + \beta_{N} N(x_t)  + \beta_{P} P(x_t). \\
 $$
 
-In this case, we need to include a factor $$\beta_N$$ and $$\beta_P$$ that will account for the influence of the true positive and true negative 
-time series signals. 
-
-With the computed and normalized positive and negative sentiment signals, we now carry out a Bayesian linear regression analysis to determine
-the distributions of the linear fit coefficients. In the Bayesian framework, we need to determine the posterior distribution of a parameter
+With the computed and normalized positive and negative sentiment signals, we carried out a Bayesian linear regression analysis to determine
+the distributions of the linear fit coefficients. In the Bayesian framework, we need to determine the posterior
+ distribution of a parameter
 $$\beta$$ given the times series data, denoted $$D$$. This posterior distribution is denoted $$P(\beta|D)$$. 
  
 This Bayesian model fitting was carried out using the __[emcee Python package](http://dfm.io/emcee/current/)__, 
-that employs a parallelized Markov-Chain monte carlo algorithm to compute the posterior distributions of the parameters of interest.
+that employs a parallelized [Markov chain Monte Carlo](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo)
+ algorithm to compute the posterior distributions of the parameters of the fit.
 Mathematically speaking we are carrying out the integrals given by 
   
 $$
@@ -380,17 +391,17 @@ P(\beta_N|D) \propto \int d\sigma \int d\beta_P \int d\beta_N \int d\alpha \ P(D
 $$
 
 
-and the function that determines the likelyhood of the data given the model parameters is
+and where the function that determines the likelyhood of the data given the model parameters is
 
 
 $$
 \\ P(D | \alpha,\beta_N,\beta_P, \beta_M,\sigma) = \text{Exp}\left( - \frac{1}{2\sigma^2}\chi^2 \right), \\
 $$
 
-$$\sigma$$ is the width of the distribution and $$\chi^2$$ is simply the least square residuals of the linear model and data.
+here $$\sigma$$ is the width of the distribution and $$\chi^2$$ is the least square residuals between the linear model and data.
 
 The priors of the parameters $$P(\beta_{N})$$, $$P(\beta_{M})$$, $$P(\beta_{P})$$, $$P(\alpha)$$ have been chosen to be uniformly 
-distributed in the range (-100,100).  The prior $$P(\sigma)$$ was chosen to be a Jeffreys prior. The results from this analysis 
+distributed in the range (-100,100).  The prior $$P(\sigma)$$ was chosen to be a scale invariant Jeffreys prior. The results from this analysis 
 are not expected to change too much for different priors, so we do not change this. 
 We calculate the posterior distributions for all 5 car brands.  The distribution for the coefficient 
 $$\beta_P$$ for Tesla is shown below,
@@ -405,13 +416,12 @@ $$\beta_P$$ for Tesla is shown below,
 
 Fig. 10 shows the median value for $$\beta_P$$ of the model as well as the 68%, and 96% confidence intervals. 
 These confidence intervals demonstrate the advantage of using the Bayesian linear regression to quantify uncertainty. 
+We observe that while the mean value of the fit is a negative value that excludes zero at the 68% confidence level, 
+we don't have enough statistical power to exclude 0 at the 96% confidence level. In a future post we will revisit 
+this analysis with a larger data set.
 
-From this plot we see that the mean value of the fit is a positive value that excludes zero at the 68% confidence level,
- but clearly from our small data set we don't have enough statistical power to exclude 0 at the 96% confidence level.
-
-Next, we would like to calculate the posterior distributions of the correlation coefficients between the sentiment signals and the returns of the stock.
-
-A summary of the correlations that we found is given below,
+Based on the median values of the $$\beta$$ parameters of the data set, in Fig. 11, we summarize the correlations that 
+were not excluded at the 68% confidence level for the 5 car brands we investigated.
 
 <figure>
     <img src="/assets/img/correlation_diagram.png" width="70%" class="center"
@@ -421,10 +431,12 @@ A summary of the correlations that we found is given below,
     </figcaption>
 </figure>
 
+Green indicates a positive trend, red a negative trend, and orange means the correlation was excluded at the 68% 
+confidence region.  
 
 The main findings of this table are:
 
-* For all vehicle brands that we looked at, the median value of $$\beta_M$$, representing the sensititivity of the market return to
+* For all vehicle brands that we looked at, the median value of $$\beta_M$$, representing the sensitivity of the market return to
 the stock return was always positive and seemed to be the strongest effect in the linear model.
 
 * The stock returns for __Tesla__ are __positively correlated__ with Negative twitter sentiments  
@@ -440,9 +452,9 @@ automotive stocks for some companies.
 
 ## Posteriors of the correlations
 
-The results of the last section give us the general "sign" of the correlations, but not the numerical values 
+The results of the last section give us the general "sign/direction" of the correlations, but not the numerical values 
 of their strengths. It will be our next task to compute the posterior distributions of these correlations. The 
-pearsons coefficient that we are interested in computing between time series $$x$$ and $$y$$ is
+Pearson's coefficient that we are interested in computing between time series $$x$$ and $$y$$ is
 
 $$
 \rho(x,y) = \frac{\sum\limits_{i}^N (x_i-\bar{x})(y_i-\bar{y})}{(N-1) s_x s_y}, \\
@@ -454,9 +466,11 @@ where $$N$$ is the number of data points. Here $$\bar{x}$$ and $$\bar{y}$$ are t
 correlation coefficients that we wish to investigate are
 
 $$
-\rho(M,r) = \text{ The correlation coefficient between the market return and the stock return of the brand} \\
-\rho(P,r) = \text{ The correlation coefficient between the positive sentiment signal and the stock return of the brand}\\
-\rho(N,r) = \text{ The correlation coefficient between the negative sentiment signal and the stock return of the brand}
+\rho(M,r) = \text{ The correlation coefficient between the market return and the stock return of the brand}, \\  
+\\
+\rho(P,r) = \text{ The correlation coefficient between the positive sentiment signal and the stock return of the brand},\\  
+\\
+\rho(N,r) = \text{ The correlation coefficient between the negative sentiment signal and the stock return of the brand}.
 $$
 
 The posterior distribution of $$\rho(P,r)$$ for Tesla is shown in Fig. 12 below
@@ -473,7 +487,7 @@ The posterior distribution of $$\rho(P,r)$$ for Tesla is shown in Fig. 12 below
 Fig 12. shows us that there is a maximum correlation coefficient that is possible for the data set, at around -0.7 for Tesla,
 and most of the distribution is centered around a negative value as we found before from the $$\beta_P$$ value in Fig. 10.
 
-Finally we summarize the median values of all correlations that we found that numerically quantify the relations in Fig. 11.
+Finally we summarize the median values of all correlations that we found that quantify the relations in Fig. 11.
 <br>
 
 <figure>
@@ -499,4 +513,4 @@ with several months worth of data to more rigorously study the model proposed he
 * __Does changing the normalization method change the correlations? For example using a min-max scaler as opposed to the Z-transformed data?__  
 * __What are the results when we include/remove outliers in the data set?__  
 
-### __Hopefully we will be able to satisfy our curiosity in the next post and we wont have to cover so much math, stay tuned!__ 
+### __Hopefully we will be able to satisfy our curiosity in the next post and we won't have to cover so much math, stay tuned!__ 
