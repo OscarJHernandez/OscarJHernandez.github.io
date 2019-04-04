@@ -3,6 +3,7 @@ layout: blog
 title: "Image Classification with PASCOL VOC dataset"
 date:   2018-08-08 13:50:39
 categories: other
+image: /assets/img/EDS3_figure1.png
 ---
 <style type="text/css" rel="stylesheet">
 .center {

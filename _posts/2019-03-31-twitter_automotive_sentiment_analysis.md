@@ -3,6 +3,7 @@ layout: blog
 title:  "Twitter Sentiment Analysis"
 date:   2019-03-31 00:00:00
 categories: other
+image: /assets/img/Pos_signal_weight.png
 ---
 <style type="text/css" rel="stylesheet">
 .center {

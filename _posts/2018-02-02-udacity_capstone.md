@@ -3,6 +3,7 @@ layout: blog
 title: "Time Series Predictions with Neural Networks"
 date:   2018-02-02 13:50:39
 categories: other
+image: /assets/img/figure10.png
 ---
 <style type="text/css" rel="stylesheet">
 .center {
