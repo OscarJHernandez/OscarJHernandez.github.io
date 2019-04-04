@@ -31,10 +31,10 @@ image: /assets/img/EDS3_figure1.png
 
 # Building and Training Deep Neural Networks for Image Classification
 
-Image classification is an important topics that is applicable to many branches in science and technology.
+Image classification is an important topic that is applicable to many branches in science and technology.
 The best methods to solve this problem are convolutional neural networks. Large networks can take weeks to train
 using multiple GPUs. In order to learn more about how to implement convolutional neural networks, preprocess the data,
-and train them, in this project we implement a few simplified CNN architectures, train them from scratch using the Pascal Voc data set 
+and train them, in this project we implement a few simplified CNN architectures, train them from scratch using the [Pascal VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/) data set 
 and benchmark them against a baseline model.  
 
 
@@ -58,13 +58,13 @@ a. [**Data Preprocessing**](#data-preprocessing)
 *   **What problem is solved by your intended predictive model?**
     The problem that I have chosen to tackle is the object
     classification task using the Pascal VOC dataset. For the sake of
-    time I focus on building classifier with four object categories;
+    time I focus on building a classifier with four object categories;
     person, dog, cat, and car. I will outline the architectures of the
     implemented deep neural networks that I trained for this purpose,
     the data preprocessing steps that I took and discuss the results.
 
 *   **Why is it important to solve your particular problem?** This
-    particular problem is important to solve because it has numerous
+    problem is important to solve because it has numerous
     real-world applications. For example, self-driving cars use
     sophisticated algorithms and equipment to map out their environment
     and in order to take appropriate actions on the road, these cars
@@ -89,7 +89,7 @@ a. [**Data Preprocessing**](#data-preprocessing)
     cameras to the classifier, which will then return the object
     category to the vehicles computer on the fly. The algorithms in the
     vehicles computer system would then take the appropriate actions
-    based on the results. However, in general the machine learning model
+    based on the results. However, in general, the machine learning model
     would act as a black box, which is fed images and then outputs the
     class labels, therefore, this algorithm can also be used as a web
     app where users upload the image and the application returns the
@@ -103,13 +103,13 @@ I used pandas to load the files:
 [person\_test.txt,cat\_test.txt,dog\_test.txt,car\_test.txt] into a
 data frame where each row contains the [image\_ID] followed by values
 indicating whether the image contains a person, dog, cat or car (True =
-1, False = -1). In addition we process the data and ensure that all of
-the objects in the dataframe are mutually exclusive. Therefore each
+1, False = -1). In addition, we process the data and ensure that all of
+the objects in the data frame are mutually exclusive. Therefore each
 image will belong to only one category. I performed this step to attempt
-to make the training process easier for the classifier, since it would
+to make the training process easier for the classifier since it would
 be trained to produce results for only one unique class label for each
 image during the training process. The first few entries of this
-dataframe are given below,
+data frame are given below,
 
 {% highlight python linenos %}
        img_ID  is_person  is_dog  is_cat  is_car
@@ -135,7 +135,7 @@ exclusive, the number of objects in each class are
 
 I noticed that the category [person]{} has significantly more objects
 than the other classes. During training, this may introduce a bias in
-our classifier and as a result of the large number of members in that
+our classifier and as a result of a large number of members in that
 category it may be better at detecting people than other objects.
 Therefore, to correct this problem, I chose to remove random images from
 the [person]{} category until only 500 are left. Once this is complete,
