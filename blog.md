@@ -16,11 +16,12 @@ permalink: /blog/
 # Featured Posts
 
 ## Data Science Projects       
-[Automotive Sentiment Analysis](_posts/2018-12-24-twitter_automotive_sentiment_analysis.md/#about)  
+[Automotive Sentiment Analysis](_posts/2019-03-31-twitter_automotive_sentiment_analysis.md/#about)  
 [Time Series with Neural Networks]()  
 
 ## Statistics and Probability Notes
-[Probability Calculus and Bayes Theorem](_posts/2018-12-06-Probability_Calculus.md/#about)
+[Probability Calculus and Bayes Theorem](_posts/2018-12-06-Probability_Calculus.md/#about)   
+[Gaussian Integrals](_posts/2019-07-09-Gaussian_integrals.md/#about)
 
 ## Machine Learning Notes 
 [Precision, Recall and all that](_posts/2018-12-06-Precision_Recall_and_all_that.md/#about)  
