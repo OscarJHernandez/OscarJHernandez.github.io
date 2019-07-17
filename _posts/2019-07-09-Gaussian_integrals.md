@@ -71,7 +71,7 @@ $$
 
 The following property of the delta function is also very useful
 $$
-\delta(x) = \delta(y)+\sum_{n=1}^{\infty} \left( - \frac{\partial }{\partial x} \right)^n \int\limits dy \ \left(x-y\right)^n 
+\delta(x) = \delta(y)\left[1+\sum_{n=1}^{\infty} \left( - \frac{\partial }{\partial x} \right)^n \int\limits dy \ \left(x-y\right)^n \right] 
 $$
 
 
