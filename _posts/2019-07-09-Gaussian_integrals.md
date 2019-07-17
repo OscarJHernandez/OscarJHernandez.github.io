@@ -55,11 +55,25 @@ $$
 \int dx_1 \ldots dx_n \int dk_1 \ldots dk_n \text{Exp}\left( -i\vec{k}^T A \vec{x} + i\vec{k}^T \vec{J}_1 ++ i\vec{J}_2^T \vec{x} \right) \propto \text{Exp}\left( \vec{J}_2^{T} A^{-1} \vec{J}_1 \right)
 $$
 
-## Representation of Delta Function
+## Representations of Delta Function
 
 $$
 \delta(x) = \frac{1}{2\pi} \int\limits_{-\infty}^{\infty} dk \ e^{ikx}
 $$
+
+In three dimensions  
+
+$$
+\delta(\vec{x}) = \frac{1}{(2\pi)^3} \int\limits_{-\infty}^{\infty} d^3k \ e^{i\vec{k}\cdot \vec{x}}.  
+$$
+
+
+
+The following property of the delta function is also very useful
+$$
+\delta(x) = \delta(y)+\sum_{n=1}^{\infty} \left( - \frac{\partial }{\partial x} \right)^n \int\limits dy \ \left(x-y\right)^n 
+$$
+
 
 
 ## Products of Gaussians
@@ -119,6 +133,39 @@ $$
 while the general case is
 
 $$
-P(\vec{x}| \vec{y}) = 
+P(\vec{x}| \vec{y}) = \frac{1}{\sqrt{ (2\pi)^k |{\bf \hat{\Sigma} }| }} \text{Exp}\left( - (\vec{x}-\hat{\mu})^T  \hat{{\bf \Sigma}}^{-1} (\vec{x}-\hat{\mu})  \right)
 $$
 
+
+where we have that
+
+$$
+\hat{\mu} = \vec{\mu}_1+\Sigma_{12}\Sigma^{-1}_{22}(\vec{y}-\vec{\mu}_2)
+$$
+
+
+and   
+
+
+$$
+\hat{\Sigma} = {\bf \Sigma}_{11} - {\bf \Sigma}_{12}{\bf \Sigma}^{-1}_{22}{\bf \Sigma}_{21}
+$$
+
+with 
+
+$$
+\hat{\mu} = \begin{bmatrix} 
+\mu_1 \\
+\mu_2
+\end{bmatrix}, \\
+
+{\bf \Sigma} = \begin{bmatrix}
+{\bf \Sigma_{11}} & {\bf \Sigma_{12}} \\
+{\bf \Sigma_{21}} & {\bf \Sigma_{22}}
+\end{bmatrix}\\
+
+\hat{x} = \begin{bmatrix} 
+\vec{x} \\
+\vec{y}
+\end{bmatrix}, 
+$$
