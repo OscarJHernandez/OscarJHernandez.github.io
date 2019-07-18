@@ -73,7 +73,9 @@ The following property of the delta function is also very useful
 
 
 $$
-\int dx \ \delta(x) f(x) = \int dy \ \delta(y)\left[1+\sum_{n=1}^{\infty} \left( - \frac{\partial }{\partial x} \right)^n \left(x-y\right)^n f(y) \right] 
+\delta(y-x) = \delta(x'-x+y-x')\\
+= \sum_{n=0}^{\infty} \frac{(y-x')^n}{n!} \left( \frac{\partial}{\partial x'} \right) \delta(x'-x) \\
+= \sum_{n=0}^{\infty} \frac{(y-x')^n}{n!} \left( - \frac{\partial}{\partial x} \right) \delta(x'-x)
 $$
 
 
