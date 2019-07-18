@@ -137,7 +137,7 @@ $$
 while the general case is
 
 $$
-P(\vec{x}| \vec{y}) = \frac{1}{\sqrt{ (2\pi)^k |{\bf \hat{\Sigma} }| }} \text{Exp}\left( - (\vec{x}-\hat{\mu})^T  \hat{{\bf \Sigma}}^{-1} (\vec{x}-\hat{\mu})  \right)
+P(\vec{x} |\vec{y}) = \frac{1}{\sqrt{(2\pi)^2|\Sigma|}} \text{Exp}\left[ \left(\hat{\mu}-\vec{x}\right)^{T}\hat{\Sigma}^{-1} \left(\hat{\mu}-\vec{x} \right) \right]
 $$
 
 
