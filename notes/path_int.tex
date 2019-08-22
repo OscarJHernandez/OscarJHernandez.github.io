@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+\section{Stochastic Process}
+A stochastic process is of the form
+\begin{align}
+X_{T+1}-X_{T} = \theta(T) X_{T} +f(t) +r_{T} \sigma(T),
+\end{align}
+where $r_T$ is a random variable drawn from the distribution $P(r,\vec{\lambda})$, where $\vec{\lambda}$ are the parameters that describe the distribution.
+
+
+\begin{align}
+P(X_T) &=  \int dX_{T-\Delta T}  \int dr_T \ P(X_T,X_{T-\Delta T},r), \\
+ &=  \int dX_{T-\Delta T}  \int dr_T \ P(X_T|X_{T-\Delta T},r)P(X_{T-\Delta T},r_T),
+\end{align}
+assuming that $X_{T-\Delta T}$ is independent of the random variable $r_T$, then this expression becomes
+\begin{align}
+P(X_T) &= \int dX_{T-\Delta T}  \int dr_T \ P(X_T|X_{T-\Delta T},r_T)P(X_{T-\Delta T})P(r_T) .
+\end{align}
+Next, we apply the constraint where 
+\begin{align}
+r_{T} = \frac{X_{T+1}-X_T -\theta(T) X_{T}-f(T) }{\sigma(T)},
+\end{align}
+this constraint is enforced through the function 
+\begin{align}
+P(X_T|X_{T-\Delta T},r_T) = \delta\left(r_{T} -\frac{X_{T}-X_{T-1} -\theta(T-\Delta T) X_{T-\Delta T}-f(T) }{\sigma(T-\Delta T)} \right).
+\end{align}
+Carrying out the integral over $r_T$ results in
+\begin{align}
+P(X_T)  &=  \int dX_{T-\Delta T} P(X_{T-\Delta T})P\left(r_T = \frac{X_{T}-X_{T-1} -\theta(T-\Delta T) X_{T-\Delta T}-f(T-\Delta T) }{\sigma(T-\Delta T)}\right),
+\end{align}
+this last expression relates the probability distribution of the current value $X_T$ to the value at a time infinitesimally in the past. Carrying out this expression recursively we obtain
+\begin{align}
+P(X_T)  &=  \int dX_{T-\Delta T}  \ P\left(\frac{X_{T}-X_{T-\Delta T}-f(T-\Delta T) -\theta(T-\Delta T) X_{T-\Delta T} }{\sigma(T-\Delta T)}\right)  \notag\\
+& \cdots \int dX_{0} \ P\left(\frac{X_{1}-X_{0}-f(T_0) -\theta(T_0) X_{0} }{\sigma(T_0)}\right)\delta(X_0 -x_0),
+\end{align}
+where $x_0$ is the position at the initial point $T_0$.\\
+
+
+\section{Gaussian Noise}
+Now we have the general forms of the stochastic integrals that we want to work with
+
+
+\subsection{Fokker-Plank Equation}
+
+\subsection{Path integrals}
+This probability can also be expressed as a path integral of the form
+\begin{align}
+P(X_T)  &=  \int \mathcal{D}X \ \text{Exp}\left(\int\limits_{T_0}^T S(\dot{X},X,t)  dt \right),
+\end{align}
+where the action is
+\begin{align}
+S(\dot{X},X,t) &= -\frac{1}{2\sigma^{2}(t)}\left( \dot{X}(t)-f(t)-\theta(t) X(t) \right)^2
+\end{align}
+
+
+\end{document}
