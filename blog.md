@@ -10,6 +10,8 @@ permalink: /blog/
 
 #### Welcome to my blog, here you will find articles covering a range of machine learning topics, from tutorials to theory.
 
+## Google link: 
+https://docs.google.com/presentation/d/1gL6RiLkVILo-S7NqPYp6V49zQEYbwKY0RBbDW2vHyXw/edit?usp=sharing
 <hr />
 
 
