@@ -42,6 +42,9 @@ some exploratory data analysis where we used topic modeling to filter irrelevant
 to study the possible influence of the twitter sentiment signals calculated by the machine learning model on the return
 of the stocks and provide the results of the analysis.
 
+I would also like to note for those interested readers that [MonkeyLearn](https://monkeylearn.com/sentiment-analysis/) has written
+a great article that introduces the ideas of sentiment analysis aswell many business user-cases. 
+
 In this work five automotive brands are examined: __Tesla, Ford, Toyota, Mercedes and Porsche__. The focus of this post is to 
 outline the mathematical and statistical analysis methods, as well as to set up the computational infrastructure
 needed to undertake such a study of tweet sentiments and financial returns. In a follow up post, we will focus on the analysis of
