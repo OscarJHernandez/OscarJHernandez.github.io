@@ -46,11 +46,14 @@ __Summer 2007__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 
 ## __Publications__
 
-__O. J. Hernandez__, C. Ji, S. Bacca, N. Barnea, "Probing uncertainties of nuclear structure corrections in light muonic atoms", Submitted to Phys. Rev. C, [arXiv:1909.05717](https://arxiv.org/abs/1909.05717)   
+
+
+
+__O. J. Hernandez__, C. Ji, S. Bacca, N. Barnea, "Probing uncertainties of nuclear structure corrections in light muonic atoms", [Phys. Rev. C 100, 064315](https://doi.org/10.1103/PhysRevC.100.064315), [arXiv:1909.05717](https://arxiv.org/abs/1909.05717)   
 
 N. Nevo Dinur, __O. J. Hernandez__, S. Bacca, N Barnea, C. Ji, S. Pastore, M. Piarulli, R.B. Wiringa, "Zemach moments and radii of 2,3H and 3,4He", [Phys. Rev. C 99, 034004, 2019.](https://journals.aps.org/prc/abstract/10.1103/PhysRevC.99.034004) [arXiv:1812.10261](https://arxiv.org/abs/1812.10261)  
 
-__O. J. Hernandez__, S. Bacca, N. Barnea, N. Nevo-Dinur, A. Ekström, C. Ji, "A statistical analysis of the nuclear structure uncertainties in muD" (Accepted, to appear in Recent Progress in Few-Body Physics) [arXiv:1903.02451](https://arxiv.org/abs/1903.02451)  
+__O. J. Hernandez__, S. Bacca, N. Barnea, N. Nevo-Dinur, A. Ekström, C. Ji, "A statistical analysis of the nuclear structure uncertainties in muD" (Recent Progress in Few-Body Physics. FB22 2018, vol 238, 833-837) [arXiv:1903.02451](https://arxiv.org/abs/1903.02451)  
 
 C. Ji, S. Bacca, N. Barnea, __O. J. Hernandez__, N. Nevo-Dinur, "Ab initio calculation of nuclear structure corrections in muonic atoms", [Journal of Phys. G 45, 093002, 2018.](http://iopscience.iop.org/article/10.1088/1361-6471/aad3eb/meta) [arXiv:1806.03101](https://arxiv.org/abs/1806.03101)
 
