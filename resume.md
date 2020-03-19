@@ -6,7 +6,7 @@ permalink: /resume/
 
 
 ## __Education__
-__(Expected)  2019__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD. in Physics,  The University of British Columbia   
+__2019__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD. in Physics,  The University of British Columbia, [PhD. Thesis Link](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0386767)    
 
 __2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Masters in Physics,  The University of Manitoba, [MSc. Thesis Link](https://mspace.lib.umanitoba.ca/handle/1993/30748)
    
