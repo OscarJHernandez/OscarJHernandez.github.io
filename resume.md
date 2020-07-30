@@ -48,6 +48,7 @@ __Summer 2007__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 
 
 
+__U. Friman-Gayer, C. Romig, T. Hüther, K. Albe, S. Bacca, T. Beck, M. Berger, J. Birkhan, K. Hebeler, O. J. Hernandez, S. König, N. Pietralla, P. C. Ries, J. Rohrer, R. Roth, D. Savran, M. Scheck, A. Schwenk, R. Seutin, and V. Werner, "Role of chiral two-body currents in 6Li magnetic properties in light of a new precision measurement with the relative self-absorption technique", Submitted to PRL. 2020 [arXiv:2005.07837](https://arxiv.org/abs/2005.07837)
 
 __O. J. Hernandez__, C. Ji, S. Bacca, N. Barnea, "Probing uncertainties of nuclear structure corrections in light muonic atoms", [Phys. Rev. C 100, 064315](https://doi.org/10.1103/PhysRevC.100.064315), [arXiv:1909.05717](https://arxiv.org/abs/1909.05717)   
 
