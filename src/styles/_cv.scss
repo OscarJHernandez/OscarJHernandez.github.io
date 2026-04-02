@@ -66,4 +66,60 @@
       border-bottom-color: $main;
     }
   }
+
+  .cv-entries {
+    margin: 0.35rem 0 1.25rem;
+  }
+
+  .cv-row {
+    display: grid;
+    grid-template-columns: minmax(9.5rem, max-content) 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 0.85rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cv-when {
+    font-weight: 600;
+    color: #333;
+    line-height: 1.55;
+  }
+
+  .cv-detail {
+    line-height: 1.55;
+    color: #444;
+    min-width: 0;
+
+    p {
+      margin: 0 0 0.5rem;
+      text-align: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    p.cv-detail-note {
+      margin-top: 0.25rem;
+      margin-bottom: 0;
+      color: #555;
+      font-size: 0.9375rem;
+    }
+  }
+
+  @media (max-width: 36rem) {
+    .cv-row {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cv-when {
+      margin-bottom: 0.15rem;
+    }
+  }
 }

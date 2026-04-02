@@ -1,40 +1,74 @@
 ## __Education__
-__2019__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD. in Physics,  The University of British Columbia, [PhD. Thesis Link](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0386767)    
 
-__2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Masters in Physics,  The University of Manitoba, [MSc. Thesis Link](https://mspace.lib.umanitoba.ca/handle/1993/30748)
-   
-__2013__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bsc. Joint Honours in Mathematics and Physics, Minor in Comp. Sci. The University of Manitoba                     
+<div class="cv-entries" markdown="0">
+<div class="cv-row">
+<div class="cv-when">2019</div>
+<div class="cv-detail"><p>PhD. in Physics, The University of British Columbia, <a href="https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0386767">PhD. Thesis Link</a></p></div>
+</div>
+<div class="cv-row">
+<div class="cv-when">2015</div>
+<div class="cv-detail"><p>Masters in Physics, The University of Manitoba, <a href="https://mspace.lib.umanitoba.ca/handle/1993/30748">MSc. Thesis Link</a></p></div>
+</div>
+<div class="cv-row">
+<div class="cv-when">2013</div>
+<div class="cv-detail"><p>Bsc. Joint Honours in Mathematics and Physics, Minor in Comp. Sci. The University of Manitoba</p></div>
+</div>
+</div>
 
 ## __Experience__
-__Fall 2017 - Present__ &nbsp;&nbsp; Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca, JG-University/UBC 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-__Fall 2015 - 2017__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-__Fall 2013 - 2015__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Graduate Research Assistant,  Supervisor: Dr. Sonia Bacca,  TRIUMF/The University of Manitoba  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium
-
-__Summer 2013__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. Sonia Bacca, TRIUMF  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium
-
-__Summer 2012__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. Eric Schippers, The University of Manitoba    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;Properties of Holomorphic functions on Riemann Surfaces.
-
-​__Summer 2010__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Research Student,  Supervisor: Dr. John Vail, The University of Manitoba  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;Theoretical study of Charge Density waves having the Graphene Structure​.
-
-__Summer 2009__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Research Student,  Supervisor: Dr. Sean Cadogan, The University of Manitoba   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mössbauer spectroscopy studies of meteorites.
-
-__Summer 2007__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Research Student,  Supervisor: Dr. John Vail, The University of Manitoba   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computational study of point defects in AlN.
+<div class="cv-entries" markdown="0">
+<div class="cv-row">
+<div class="cv-when">Fall 2017 - Present</div>
+<div class="cv-detail"><p>Graduate Research Assistant, Supervisor: Dr. Sonia Bacca, JG-University/UBC</p></div>
+</div>
+<div class="cv-row">
+<div class="cv-when">Fall 2015 - 2017</div>
+<div class="cv-detail"><p>Graduate Research Assistant, Supervisor: Dr. Sonia Bacca, TRIUMF</p></div>
+</div>
+<div class="cv-row">
+<div class="cv-when">Fall 2013 - 2015</div>
+<div class="cv-detail">
+<p>Graduate Research Assistant, Supervisor: Dr. Sonia Bacca, TRIUMF/The University of Manitoba</p>
+<p class="cv-detail-note">Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium</p>
+</div>
+</div>
+<div class="cv-row">
+<div class="cv-when">Summer 2013</div>
+<div class="cv-detail">
+<p>Research Student, Supervisor: Dr. Sonia Bacca, TRIUMF</p>
+<p class="cv-detail-note">Nuclear Structure Corrections to Lamb Shift in Muonic Deuterium</p>
+</div>
+</div>
+<div class="cv-row">
+<div class="cv-when">Summer 2012</div>
+<div class="cv-detail">
+<p>Research Student, Supervisor: Dr. Eric Schippers, The University of Manitoba</p>
+<p class="cv-detail-note">Properties of Holomorphic functions on Riemann Surfaces.</p>
+</div>
+</div>
+<div class="cv-row">
+<div class="cv-when">Summer 2010</div>
+<div class="cv-detail">
+<p>Research Student, Supervisor: Dr. John Vail, The University of Manitoba</p>
+<p class="cv-detail-note">Theoretical study of Charge Density waves having the Graphene Structure.</p>
+</div>
+</div>
+<div class="cv-row">
+<div class="cv-when">Summer 2009</div>
+<div class="cv-detail">
+<p>Research Student, Supervisor: Dr. Sean Cadogan, The University of Manitoba</p>
+<p class="cv-detail-note">Mössbauer spectroscopy studies of meteorites.</p>
+</div>
+</div>
+<div class="cv-row">
+<div class="cv-when">Summer 2007</div>
+<div class="cv-detail">
+<p>Research Student, Supervisor: Dr. John Vail, The University of Manitoba</p>
+<p class="cv-detail-note">Computational study of point defects in AlN.</p>
+</div>
+</div>
+</div>
 
 
 ## __Publications__
