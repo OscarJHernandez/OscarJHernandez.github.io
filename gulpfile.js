@@ -117,7 +117,7 @@ function serve() {
   gulp.watch('src/fonts/**/*.{ttf,woff,woff2}', gulp.series(fonts, reloadBrowser));
   gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(imageminTask, jekyllReload));
   gulp.watch(
-    ['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/**/*.md', '_config.yml'],
+    ['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_config.yml'],
     jekyllReload
   );
   return new Promise(function () {});
