@@ -1,7 +1,5 @@
 # Particle Jekyll Theme
 
-![](./particle.jpg)
-
 This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
 
 The Theme features:
@@ -57,7 +55,8 @@ In order to compile the assets and run Jekyll on local you need to follow those 
 
 - Install [NodeJS](https://nodejs.org/)
 - Run `npm install`
-- Run `gulp`
+- Run `npm run build` to compile assets (and Jekyll when Ruby is set up)
+- Run `npm run serve` (or `npx gulp`) for BrowserSync after `bundle install`
 
 ## Running Locally with Jekyll:
 * Install gem bundler:

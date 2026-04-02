@@ -1,89 +1,134 @@
+'use strict';
+
 var gulp = require('gulp');
 var csso = require('gulp-csso');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var plumber = require('gulp-plumber');
 var cp = require('child_process');
 var imagemin = require('gulp-imagemin');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 
-var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
+function runSpawn(cmd, args, options, cb) {
+  var finished = false;
+  function finish(err) {
+    if (!finished) {
+      finished = true;
+      cb(err);
+    }
+  }
+  var child = cp.spawn(cmd, args, options);
+  child.on('error', function () {
+    finish(new Error('spawn failed: ' + cmd));
+  });
+  child.on('close', function (code) {
+    finish(code === 0 ? null : new Error(cmd + ' exited ' + code));
+  });
+}
 
-/*
- * Build the Jekyll Site
- * runs a child process in node that runs the jekyll commands
- */
-gulp.task('jekyll-build', function (done) {
-	return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
-		.on('close', done);
-});
+function jekyllBuild(cb) {
+  var isWin = /^win/.test(process.platform);
+  var cmd = isWin ? 'bundle.bat' : 'bundle';
+  runSpawn(
+    cmd,
+    ['exec', 'jekyll', 'build'],
+    { stdio: 'inherit', shell: isWin },
+    function (bundleErr) {
+      if (!bundleErr) {
+        return cb();
+      }
+      if (isWin) {
+        return cb(bundleErr);
+      }
+      runSpawn('jekyll', ['build'], { stdio: 'inherit' }, function (jErr) {
+        cb(jErr || undefined);
+      });
+    }
+  );
+}
 
-/*
- * Rebuild Jekyll & reload browserSync
- */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-	browserSync.reload();
-});
+function jekyllBuildOptional(done) {
+  jekyllBuild(function (err) {
+    if (err) {
+      console.warn('[gulp] Jekyll build skipped:', err.message);
+      console.warn('[gulp] Run `bundle install` then `bundle exec jekyll build` to generate _site.');
+    }
+    done();
+  });
+}
 
-/*
- * Build the jekyll site and launch browser-sync
- */
-gulp.task('browser-sync', ['jekyll-build'], function() {
-	browserSync({
-		server: {
-			baseDir: '_site'
-		}
-	});
-});
+function jekyllBuildTask(done) {
+  jekyllBuild(done);
+}
 
-/*
-* Compile and minify sass
-*/
-gulp.task('sass', function() {
-  gulp.src('src/styles/**/*.scss')
+function reloadBrowser(done) {
+  browserSync.reload();
+  done();
+}
+
+function sassTask() {
+  return gulp
+    .src('src/styles/main.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(csso())
     .pipe(gulp.dest('assets/css/'));
-});
+}
 
-/*
-* Compile fonts
-*/
-gulp.task('fonts', function() {
-	gulp.src('src/fonts/**/*.{ttf,woff,woff2}')
-	.pipe(plumber())
-	.pipe(gulp.dest('assets/fonts/'));
-})
+function fonts() {
+  return gulp
+    .src('src/fonts/**/*.{ttf,woff,woff2}')
+    .pipe(plumber())
+    .pipe(gulp.dest('assets/fonts/'));
+}
 
-/*
- * Minify images
- */
-gulp.task('imagemin', function() {
-	return gulp.src('src/img/**/*.{jpg,png,gif}')
-		.pipe(plumber())
-		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-		.pipe(gulp.dest('assets/img/'));
-});
+function imageminTask() {
+  return gulp
+    .src('src/img/**/*.{jpg,png,gif}')
+    .pipe(plumber())
+    .pipe(
+      imagemin({
+        optimizationLevel: 3,
+        progressive: true,
+        interlaced: true,
+      })
+    )
+    .pipe(gulp.dest('assets/img/'));
+}
 
-/**
- * Compile and minify js
- */
-gulp.task('js', function(){
-	return gulp.src('src/js/**/*.js')
-		.pipe(plumber())
-		.pipe(concat('main.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('assets/js/'))
-});
+function js() {
+  return gulp
+    .src('src/js/**/*.js')
+    .pipe(plumber())
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js/'));
+}
 
-gulp.task('watch', function() {
-  gulp.watch('src/styles/**/*.scss', ['sass', 'jekyll-rebuild']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/fonts/**/*.{tff,woff,woff2}', ['fonts']);
-  gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-  gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
-});
+var jekyllReload = gulp.series(jekyllBuildTask, reloadBrowser);
 
-gulp.task('default', ['js', 'sass', 'fonts', 'browser-sync', 'watch']);
+function serve() {
+  browserSync.init({
+    server: { baseDir: '_site' },
+  });
+  gulp.watch('src/styles/**/*.scss', gulp.series(sassTask, jekyllReload));
+  gulp.watch('src/js/**/*.js', gulp.series(js, reloadBrowser));
+  gulp.watch('src/fonts/**/*.{ttf,woff,woff2}', gulp.series(fonts, reloadBrowser));
+  gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(imageminTask, jekyllReload));
+  gulp.watch(
+    ['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/**/*.md', '_config.yml'],
+    jekyllReload
+  );
+  return new Promise(function () {});
+}
+
+var compileAssets = gulp.parallel(js, sassTask, fonts);
+
+exports.sass = sassTask;
+exports.js = js;
+exports.fonts = fonts;
+exports.imagemin = imageminTask;
+exports.jekyllBuild = jekyllBuildTask;
+exports.build = gulp.series(compileAssets, imageminTask, jekyllBuildOptional);
+exports.default = gulp.series(compileAssets, jekyllBuildTask, serve);

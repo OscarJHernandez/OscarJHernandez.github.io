@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   {% include head.html %}
-<!--
-  <meta property="og:image" content={{page.image}}>
--->
-  <link href="/assets/css/syntax.css" rel="stylesheet">
+  <link href="{{ '/assets/css/syntax.css' | prepend: site.baseurl }}" rel="stylesheet">
+</head>
   <body>
 	  {% include header.html %}
          <section id="about">
@@ -12,3 +11,4 @@
          </section>
       {% include footer.html %}
   </body>
+</html>
