@@ -1,19 +1,19 @@
-<div id="particles-js">
-  <div class="header">
-      <h1>
-        <span class="site-title">{{site.username}}</span>
-        <span class="site-description">{{site.user_title}}</span>
-      </h1>
-      <div class="header-icons">
-        <a aria-label="Send email" href="/contact/#about"><i class="icon fa fa-envelope"></i></a>
-        <a aria-label="Linked in" target="_blank" href="https://www.linkedin.com/in/oscar-javier-hernandez/"><i class="icon fa fa-linkedin" aria-hidden="true"></i></a>
-        <a aria-label="My Github" target="_blank" href="https://github.com/OscarJHernandez/"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-      </div>
-      <div class="header-links">
-        <a class="link" href="/#about">About Me</a>
-        <a class="link" href="/#projects">Projects</a>
-        <a class="link" href="/resume/#about">Resume</a>
-      </div>
+<header class="site-hero" role="banner">
+  <div class="site-hero-inner">
+    <h1 class="site-hero-title">
+      <span class="site-title">{{ site.username }}</span>
+      <span class="site-description">{{ site.user_title }}</span>
+    </h1>
+    <div class="header-icons">
+      <a aria-label="Send email" href="{{ site.baseurl }}/contact/"><i class="icon fa fa-envelope" aria-hidden="true"></i></a>
+      <a aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/oscar-javier-hernandez/"><i class="icon fa fa-linkedin" aria-hidden="true"></i></a>
+      <a aria-label="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/OscarJHernandez/"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+    </div>
+    <nav class="header-links" aria-label="Primary">
+      <a class="link" href="{{ site.baseurl }}/#about">About</a>
+      <a class="link" href="{{ site.baseurl }}/#cv">CV</a>
+      <a class="link" href="{{ site.baseurl }}/contact/">Contact</a>
+      <a class="link" href="{{ site.baseurl }}/resume/">Résumé</a>
+    </nav>
   </div>
-  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
-</div>
+</header>

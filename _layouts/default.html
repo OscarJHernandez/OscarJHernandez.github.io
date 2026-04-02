@@ -4,10 +4,14 @@
     {% include head.html %}
   </head>
   <body>
-      {% include header.html %}
-      <section id="about">
-        {% include about.html %}
-      </section>
-      {% include footer.html %}
+    {% include header.html %}
+    <section id="about" class="page-content intro-section">
+      {% include about.html %}
+    </section>
+    <section id="cv" class="page-content cv-section">
+      {% capture cv_body %}{% include cv.md %}{% endcapture %}
+      {{ cv_body | markdownify }}
+    </section>
+    {% include footer.html %}
   </body>
 </html>

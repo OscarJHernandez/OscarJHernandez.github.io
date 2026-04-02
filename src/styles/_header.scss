@@ -1,59 +1,74 @@
-#particles-js {
+.site-hero {
   background: $main;
-  display: flex;
-  vertical-align: bottom;
-  width: 100%;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  .particles-js-canvas-el {
-    width:100% !important;
-    height:100vh !important;
-  }
+  color: #fff;
+  padding: 2.5rem 1.25rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.header {
-  z-index: 1;
-  text-align: center;
-  color:#FFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.site-hero-inner {
+  max-width: 720px;
   margin: 0 auto;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+}
+
+.site-hero-title {
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+}
+
+.site-hero-title {
+  position: static;
+  transform: none;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+
   .site-title {
-    font-size: 50px;
     display: block;
-    line-height: 1;
-    color: #FFF;
-    @media only screen and (min-width:$cut){
-      margin: 0;
-      font-size: 100px;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    @media only screen and (min-width: $cut) {
+      font-size: 2.25rem;
     }
   }
+
   .site-description {
-    font-size: 20px;
     display: block;
-    line-height: 1;
-    color: #FFF;
-    margin-top: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 40px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+    @media only screen and (min-width: $cut) {
+      font-size: 1.125rem;
     }
   }
 }
 
 .header-links {
-  margin: 10px;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+
   .link {
-    color: #FFF;
+    color: rgba(255, 255, 255, 0.92);
     text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 20px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      border-bottom-color: rgba(255, 255, 255, 0.5);
     }
   }
 }
@@ -61,62 +76,33 @@
 .header-icons {
   display: flex;
   justify-content: center;
-  text-align: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+
   .icon {
-    text-align: center;
-    color: #FFF;
+    color: #fff;
     width: 20px;
     height: 20px;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
-    margin: 5px;
     border-radius: 50%;
-    border: 2px solid #FFF;
-    transition: all .7s;
-    &:hover {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover,
+    &:focus {
       color: $main;
-      background: #FFF;
-    }
-    &:active {
-      color: $main;
-      background: #FFF;
-    }
-    @media only screen and (min-width:$cut) {
-      width: 35px;
-      height: 35px;
-      font-size: 35px;
+      background: #fff;
+      border-color: #fff;
     }
   }
-}
 
-.down {
-  color: #FFF;
-  position: absolute;
-  bottom: 25px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  cursor: pointer;
-  .icon {
-      position: absolute;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      width: 100px;
-      height: 100px;
-      fill: #fff;
-      -webkit-animation: pulse 1.3s infinite;
-      animation: pulse 1.3s infinite;
-      &:hover {
-        color: $sec;
-      }
-      &:active {
-        color: $sec;
-      }
+  @media only screen and (min-width: $cut) {
+    .icon {
+      width: 22px;
+      height: 22px;
+      font-size: 20px;
+    }
   }
 }

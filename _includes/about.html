@@ -1,33 +1,28 @@
 <div class="user-details">
-  <style>
-ul li{ content:'\00b7'; font-size:18px; padding: 5px; }
-body {
-  color: black;
-  text-align: justify;
-}
-  </style>
-  <h1> About Me </h1>
-  <ul>
-  <li> {{site.user_description1}} </li>
-  <li> {{site.user_description2}}</li>
-  <li> {{site.user_description3}}</li>
-   </ul>
-   <p style="font-size:120%;" ><a href="https://scholar.google.de/citations?user=xsoiVqAAAAAJ&hl=en"> Google Scholar </a></p>
-   <p style="font-size:120%;"><a href="https://www.researchgate.net/profile/Oscar_Hernandez58"> Research Gate </a></p>
+  <h1 class="intro-heading">About</h1>
+  <ul class="intro-list">
+    <li>{{ site.user_description1 }}</li>
+    <li>{{ site.user_description2 }}</li>
+    <li>{{ site.user_description3 }}</li>
+  </ul>
+  <p class="intro-links">
+    <a href="https://scholar.google.de/citations?user=xsoiVqAAAAAJ&amp;hl=en">Google Scholar</a>
+    <span class="intro-links-sep" aria-hidden="true">·</span>
+    <a href="https://www.researchgate.net/profile/Oscar_Hernandez58">ResearchGate</a>
+  </p>
 </div>
-  <div class="user">
-    <div class="tech">
-      <h2>Coding</h2>
-      <i class="devicon-python-plain"></i>
-      <i class="devicon-cplusplus-plain"></i>
-      <p>Python, Fortran, C++
-                            </p>
-    </div>
-    <div class="tech">
-      <h2>Tools</h2>
-      <i class="devicon-ubuntu-plain-wordmark colored"></i>
-      <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-      <i class="devicon-github-plain-wordmark colored"></i>
-      <p> Linux, Amazon web services, Github, Gitlab and Bitbucket</p>
-    </div>
+<div class="user user-skills">
+  <div class="tech">
+    <h2>Coding</h2>
+    <i class="devicon-python-plain" aria-hidden="true"></i>
+    <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
+    <p>Python, Fortran, C++</p>
+  </div>
+  <div class="tech">
+    <h2>Tools</h2>
+    <i class="devicon-ubuntu-plain-wordmark colored" aria-hidden="true"></i>
+    <i class="devicon-amazonwebservices-plain-wordmark colored" aria-hidden="true"></i>
+    <i class="devicon-github-plain-wordmark colored" aria-hidden="true"></i>
+    <p>Linux, AWS, GitHub, GitLab, Bitbucket</p>
+  </div>
 </div>

@@ -3,11 +3,11 @@
 <head>
   {% include head.html %}
 </head>
-  <body>
-	  {% include header.html %}
-         <section id="about">
-        {{ content }}
-         </section>
-      {% include footer.html %}
-  </body>
+<body>
+  {% include header.html %}
+  <section id="{% if page.cv_page %}cv{% else %}about{% endif %}" class="page-content{% if page.cv_page %} cv-section{% endif %}">
+    {{ content }}
+  </section>
+  {% include footer.html %}
+</body>
 </html>
