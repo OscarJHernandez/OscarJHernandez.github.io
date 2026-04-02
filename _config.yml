@@ -6,10 +6,7 @@ markdown: kramdown
 
 # User settings
 username: Oscar Javier Hernandez
-user_title: Data scientist & researcher
-user_description1: I am a data scientist employing a range of statistical and machine learning  methodologies to generate predictions with quantified uncertainty estimates. 
-user_description2: With a PhD background in theoretical and computational nuclear physics, I have 5+ years’ experience implementing algorithms to solve complex mathematical problems. My analytical and computational specialization drive my passion for data science and machine learning - collecting and analyzing data sets; building accurate AI models and generating predictions with quantified uncertainty estimates.
-user_description3: I am a results oriented researcher and communicator, producing 8 publications in < 5 years; delivering 5 talks and presenting 5+ posters at leading conferences in my field at both local and international levels.
+user_title: ""
 email: javierh@phas.ubc.ca
 twitter_username: lorem_ipsum
 github_username:  

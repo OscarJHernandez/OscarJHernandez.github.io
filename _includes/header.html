@@ -2,7 +2,9 @@
   <div class="site-hero-inner">
     <h1 class="site-hero-title">
       <span class="site-title">{{ site.username }}</span>
+      {% if site.user_title != nil and site.user_title != "" %}
       <span class="site-description">{{ site.user_title }}</span>
+      {% endif %}
     </h1>
     <div class="header-icons">
       <a aria-label="Send email" href="{{ site.baseurl }}/contact/"><i class="icon fa fa-envelope" aria-hidden="true"></i></a>
