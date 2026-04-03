@@ -1,6 +1,6 @@
 ---
 layout: resume
-title: Resume
+title: CV
 permalink: /resume/
 cv_page: true
 ---

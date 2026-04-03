@@ -1,3 +1,20 @@
+## __Industry experience__
+
+<div class="cv-entries" markdown="0">
+<div class="cv-row">
+<div class="cv-when">2023 - Present</div>
+<div class="cv-detail"><p>Gen Digital Inc.</p></div>
+</div>
+<div class="cv-row">
+<div class="cv-when">2022 - 2023</div>
+<div class="cv-detail"><p>Avira (Part of Gen Digital Inc.)</p></div>
+</div>
+<div class="cv-row">
+<div class="cv-when">2019 - 2022</div>
+<div class="cv-detail"><p>Zorc Cybernetics GmbH</p></div>
+</div>
+</div>
+
 ## __Education__
 
 <div class="cv-entries" markdown="0">
