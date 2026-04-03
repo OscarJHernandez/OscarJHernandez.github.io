@@ -1,5 +1,7 @@
 # Site settings
 title: OscarJavierHernandez
+description: Personal site for Oscar J. Hernandez
+repository: OscarJHernandez/OscarJHernandez.github.io
 markdown: kramdown
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
