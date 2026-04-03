@@ -92,7 +92,11 @@
 
 
 
-U. Friman-Gayer, C. Romig, T. Hüther, K. Albe, S. Bacca, T. Beck, M. Berger, J. Birkhan, K. Hebeler, __O. J. Hernandez__, S. König, N. Pietralla, P. C. Ries, J. Rohrer, R. Roth, D. Savran, M. Scheck, A. Schwenk, R. Seutin, and V. Werner, "Role of chiral two-body currents in 6Li magnetic properties in light of a new precision measurement with the relative self-absorption technique", Submitted to PRL. 2020 [arXiv:2005.07837](https://arxiv.org/abs/2005.07837)
+R. Seutin, __O. J. Hernandez__, T. Miyagi, S. Bacca, K. Hebeler, S. König, and A. Schwenk, "Magnetic dipole operator from chiral effective field theory for many-body expansion methods", [Phys. Rev. C 108, 054005](https://doi.org/10.1103/PhysRevC.108.054005), 2023
+
+S. S. Li Muli, B. Acharya, __O. J. Hernandez__, S. Bacca, "Bayesian analysis of nuclear polarizability corrections to the Lamb shift of muonic H-atoms and He-ions", [Journal of Phys. G 49, 105101, 2022.](https://doi.org/10.1088/1361-6471/ac81e0) [arXiv:2203.10792](https://arxiv.org/abs/2203.10792)
+
+U. Friman-Gayer, C. Romig, T. Hüther, K. Albe, S. Bacca, T. Beck, M. Berger, J. Birkhan, K. Hebeler, __O. J. Hernandez__, S. König, N. Pietralla, P. C. Ries, J. Rohrer, R. Roth, D. Savran, M. Scheck, A. Schwenk, R. Seutin, and V. Werner, "Role of chiral two-body currents in 6Li magnetic properties in light of a new precision measurement with the relative self-absorption technique", [Phys. Rev. Lett. 126, 102501](https://doi.org/10.1103/PhysRevLett.126.102501), 2021 [arXiv:2005.07837](https://arxiv.org/abs/2005.07837)
 
 __O. J. Hernandez__, C. Ji, S. Bacca, N. Barnea, "Probing uncertainties of nuclear structure corrections in light muonic atoms", [Phys. Rev. C 100, 064315](https://doi.org/10.1103/PhysRevC.100.064315), 2019 [arXiv:1909.05717](https://arxiv.org/abs/1909.05717)   
 
@@ -111,7 +115,7 @@ J. M Vail, __O. J. Hernandez__, M. Si, and Z. Wang. “Graphene Electronic Struc
 __O. J. Hernandez__, N. N. Dinur, C. Ji, S. Bacca, and N. Barnea . Update on nuclear structure effects in light muonic atoms.  
 [Hyperfine Interact. 237: 158, (2016).](https://link.springer.com/article/10.1007%2Fs10751-016-1371-9)  [arXiv:1604.06496](https://arxiv.org/abs/1604.06496)
 
-C. Ji, __O. J. Hernandez__, N. Nevo Dinur, S. Bacca, N. Barnea. Understanding the proton radius puzzle: Nuclear structure effects in light muonic atoms, [EPJ Web of Conferences 113, 03006 2015.](https://www.epj-conferences.org/articles/epjconf/abs/2016/08/epjconf_fb2016_03006/epjconf_fb2016_03006.html),  [arXiv:1509.01430](https://arxiv.org/abs/1509.01430)
+C. Ji, __O. J. Hernandez__, N. Nevo Dinur, S. Bacca, N. Barnea. Understanding the proton radius puzzle: Nuclear structure effects in light muonic atoms, [EPJ Web of Conferences 113, 03006 (2016).](https://www.epj-conferences.org/articles/epjconf/abs/2016/08/epjconf_fb2016_03006/epjconf_fb2016_03006.html),  [arXiv:1509.01430](https://arxiv.org/abs/1509.01430)
 
 __O. J. Hernandez__, C. Ji, S. Bacca,N. Nevo Dinur, N. Barnea. Improved estimates of the nuclear structure corrections in μD,
 [Phys. Letters B 736:344-349 (2014).](https://www.sciencedirect.com/science/article/pii/S0370269314005413?via%3Dihub) [arXiv:1406.5230](https://arxiv.org/abs/1406.5230)
