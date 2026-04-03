@@ -10,6 +10,8 @@ markdown: kramdown
 username: Oscar J. Hernandez
 user_title: ""
 email: javierhernandezmelgar@gmail.com
+# Base64 of site.email; keep in sync when the address changes (used for click-to-reveal).
+email_b64: amF2aWVyaGVybmFuZGV6bWVsZ2FyQGdtYWlsLmNvbQ==
 twitter_username: lorem_ipsum
 github_username:  
 gplus_username:  lorem_ipsum

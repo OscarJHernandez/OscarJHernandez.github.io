@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){new SweetScroll({})},!1);
+document.addEventListener("DOMContentLoaded",function(){new SweetScroll({})},!1),document.addEventListener("click",function(e){var t=e.target.closest(".js-email-reveal");if(t){var a=t.getAttribute("data-email-b64");if(a){e.preventDefault();e=t.closest(".email-reveal-wrap");if(e)try{var l=atob(a),n=document.createElement("a");n.href="mailto:"+l,n.textContent=l,n.className="email-reveal-link",e.replaceChild(n,t)}catch(e){}}}},!1);

@@ -6,6 +6,7 @@
 <body>
   {% include header.html %}
   <section id="{% if page.cv_page %}cv{% else %}about{% endif %}" class="page-content{% if page.cv_page %} cv-section{% endif %}">
+    {% if page.cv_page %}{% include cv-contact-notice.html %}{% endif %}
     {{ content }}
   </section>
   {% include footer.html %}
