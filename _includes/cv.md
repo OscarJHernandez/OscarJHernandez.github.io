@@ -36,7 +36,7 @@
 
 <div class="cv-entries" markdown="0">
 <div class="cv-row">
-<div class="cv-when">Fall 2017 - Present</div>
+<div class="cv-when">Fall 2017 - 2020</div>
 <div class="cv-detail"><p>Graduate Research Assistant, Supervisor: Dr. Sonia Bacca, JG-University/UBC</p></div>
 </div>
 <div class="cv-row">
