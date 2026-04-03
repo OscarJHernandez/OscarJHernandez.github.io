@@ -36,6 +36,15 @@ ul, ol {
 p, figure {
     margin: 1em 0;
 }
+a {
+    color: $link;
+
+    &:hover,
+    &:focus {
+        color: $link-hover;
+    }
+}
+
 a img {
     border: none;
 }

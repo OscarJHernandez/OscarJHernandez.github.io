@@ -2,7 +2,7 @@
 
 <div class="cv-entries" markdown="0">
 <div class="cv-row">
-<div class="cv-when">2019</div>
+<div class="cv-when">2020</div>
 <div class="cv-detail"><p>PhD. in Physics, The University of British Columbia, <a href="https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0386767">PhD. Thesis Link</a></p></div>
 </div>
 <div class="cv-row">
@@ -15,7 +15,7 @@
 </div>
 </div>
 
-## __Experience__
+## __Academic experience__
 
 <div class="cv-entries" markdown="0">
 <div class="cv-row">
