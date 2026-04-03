@@ -7,7 +7,6 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass')(require('sass'));
 var plumber = require('gulp-plumber');
 var cp = require('child_process');
-var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
 
 function runSpawn(cmd, args, options, cb) {
@@ -83,17 +82,10 @@ function fonts() {
     .pipe(gulp.dest('assets/fonts/'));
 }
 
-function imageminTask() {
+function images() {
   return gulp
     .src('src/img/**/*.{jpg,png,gif}')
     .pipe(plumber())
-    .pipe(
-      imagemin({
-        optimizationLevel: 3,
-        progressive: true,
-        interlaced: true,
-      })
-    )
     .pipe(gulp.dest('assets/img/'));
 }
 
@@ -115,7 +107,7 @@ function serve() {
   gulp.watch('src/styles/**/*.scss', gulp.series(sassTask, jekyllReload));
   gulp.watch('src/js/**/*.js', gulp.series(js, reloadBrowser));
   gulp.watch('src/fonts/**/*.{ttf,woff,woff2}', gulp.series(fonts, reloadBrowser));
-  gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(imageminTask, jekyllReload));
+  gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(images, jekyllReload));
   gulp.watch(
     ['*.html', '_includes/*.html', '_includes/*.md', '_layouts/*.html', '*.md', '_config.yml'],
     jekyllReload
@@ -128,7 +120,7 @@ var compileAssets = gulp.parallel(js, sassTask, fonts);
 exports.sass = sassTask;
 exports.js = js;
 exports.fonts = fonts;
-exports.imagemin = imageminTask;
+exports.images = images;
 exports.jekyllBuild = jekyllBuildTask;
-exports.build = gulp.series(compileAssets, imageminTask, jekyllBuildOptional);
+exports.build = gulp.series(compileAssets, images, jekyllBuildOptional);
 exports.default = gulp.series(compileAssets, jekyllBuildTask, serve);
