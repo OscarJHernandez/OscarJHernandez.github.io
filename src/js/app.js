@@ -20,96 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }).catch(function () {});
   }
   document.addEventListener('DOMContentLoaded', function () {
-    var cssLink = document.querySelector('link[href*="main.css"]');
-    var cssHref = cssLink ? cssLink.href : '';
-    var resolvedFontUrl = '';
-    try {
-      if (cssHref) {
-        resolvedFontUrl = new URL(
-          '../fonts/fontawesome-webfont.woff2?v=4.7.0',
-          cssHref
-        ).href;
-      }
-    } catch (e) {
-      resolvedFontUrl = 'resolve-error:' + String(e.message);
-    }
-    var icon = document.querySelector('.header-icons .fa');
-    var iconFF = icon ? window.getComputedStyle(icon).fontFamily : '(no .header-icons .fa)';
-    var beforeFF = '';
-    var beforeContent = '';
-    if (icon) {
-      try {
-        beforeFF = window.getComputedStyle(icon, '::before').fontFamily;
-        beforeContent = window.getComputedStyle(icon, '::before').content;
-      } catch (e) {
-        beforeFF = 'pseudo-error';
-      }
-    }
+    var list = document.querySelectorAll('.header-icons svg.header-icon');
+    var first = list[0];
+    var r = first ? first.getBoundingClientRect() : null;
     dbg({
-      location: 'app.js:icon-styles',
-      message: 'computed styles for header FA icon',
+      location: 'app.js:header-svgs',
+      message: 'header inline SVG icons (post webfont bypass)',
       data: {
-        cssHref: cssHref,
-        resolvedFontUrl: resolvedFontUrl,
-        iconFontFamily: iconFF,
-        beforeFontFamily: beforeFF,
-        beforeContent: beforeContent,
+        svgCount: list.length,
+        firstWidthPx: r ? Math.round(r.width * 100) / 100 : null,
+        firstHeightPx: r ? Math.round(r.height * 100) / 100 : null,
       },
-      hypothesisId: 'H3',
-      runId: 'post-font-path-fix',
+      hypothesisId: 'FIX-SVG',
+      runId: 'svg-icon-fix',
     });
-    if (resolvedFontUrl && resolvedFontUrl.indexOf('error') === -1) {
-      fetch(resolvedFontUrl, { method: 'HEAD', cache: 'no-store' })
-        .then(function (r) {
-          dbg({
-            location: 'app.js:font-head',
-            message: 'HEAD font file',
-            data: {
-              url: resolvedFontUrl,
-              status: r.status,
-              ok: r.ok,
-              ct: r.headers.get('content-type'),
-            },
-            hypothesisId: 'H1',
-            runId: 'post-font-path-fix',
-          });
-        })
-        .catch(function (err) {
-          dbg({
-            location: 'app.js:font-head',
-            message: 'HEAD font failed',
-            data: { url: resolvedFontUrl, err: String(err) },
-            hypothesisId: 'H1',
-            runId: 'post-font-path-fix',
-          });
-        });
-    }
-    if (document.fonts && document.fonts.check) {
-      dbg({
-        location: 'app.js:fonts-check',
-        message: 'document.fonts.check FontAwesome',
-        data: {
-          unquoted: document.fonts.check('1em FontAwesome'),
-          quoted: document.fonts.check('1em "FontAwesome"'),
-        },
-        hypothesisId: 'H2',
-        runId: 'post-font-path-fix',
-      });
-    }
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(function () {
-        dbg({
-          location: 'app.js:fonts-ready',
-          message: 'after document.fonts.ready',
-          data: {
-            unquoted: document.fonts.check('1em FontAwesome'),
-            quoted: document.fonts.check('1em "FontAwesome"'),
-          },
-          hypothesisId: 'H2',
-          runId: 'post-font-path-fix',
-        });
-      });
-    }
   });
 })();
 // #endregion

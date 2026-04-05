@@ -80,7 +80,7 @@
   gap: 0.5rem;
   margin-top: 0.5rem;
 
-  /* Circle and hit target live on the link — sizing the <i> breaks FA4 glyphs (tofu squares). */
+  /* Inline SVGs use currentColor — no webfont dependency for these icons. */
   > a {
     display: inline-flex;
     align-items: center;
@@ -101,14 +101,11 @@
     }
   }
 
-  .fa {
-    font-family: FontAwesome, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.125rem;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  .header-icon {
+    display: block;
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
   }
 
   @media only screen and (min-width: $cut) {
@@ -117,8 +114,9 @@
       height: 2.875rem;
     }
 
-    .fa {
-      font-size: 1.25rem;
+    .header-icon {
+      width: 1.25rem;
+      height: 1.25rem;
     }
   }
 }
