@@ -1,24 +1,27 @@
 ## __Industry experience__
 
 <div class="cv-entries" markdown="0">
-<div class="cv-row">
+<div class="cv-row cv-row--with-role">
 <div class="cv-when">2023 - Present</div>
+<div class="cv-title">Data Engineer / Data Analyst</div>
 <div class="cv-detail">
-<p>Data Engineer / Data Analyst, Gen Digital Inc.</p>
+<p class="cv-company">Gen Digital Inc.</p>
 <p class="cv-detail-note">Fortune 500 cybersecurity company (NASDAQ: GEN), parent of Norton, Avast, LifeLock, Avira and AVG.</p>
 </div>
 </div>
-<div class="cv-row">
+<div class="cv-row cv-row--with-role">
 <div class="cv-when">2022 - 2023</div>
+<div class="cv-title">Product Data Scientist</div>
 <div class="cv-detail">
-<p>Product Data Scientist, Avira (Part of Gen Digital Inc.)</p>
+<p class="cv-company">Avira (Part of Gen Digital Inc.)</p>
 <p class="cv-detail-note">Leading consumer cybersecurity branch in DACH, acquired by Gen Digital.</p>
 </div>
 </div>
-<div class="cv-row">
+<div class="cv-row cv-row--with-role">
 <div class="cv-when">2019 - 2022</div>
+<div class="cv-title">Data Scientist / Data Analyst</div>
 <div class="cv-detail">
-<p>Data Scientist / Data Analyst, Zorc Cybernetics GmbH</p>
+<p class="cv-company">Zorc Cybernetics GmbH</p>
 <p class="cv-detail-note">B2B industrial technology company for process monitoring and optimization.</p>
 </div>
 </div>

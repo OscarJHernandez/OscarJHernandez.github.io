@@ -75,13 +75,34 @@
   .cv-row {
     display: grid;
     grid-template-columns: minmax(9.5rem, max-content) 1fr;
-    gap: 1rem;
+    gap: 1rem 1.25rem;
     align-items: start;
     margin-bottom: 0.85rem;
 
     &:last-child {
       margin-bottom: 0;
     }
+
+    &--with-role {
+      grid-template-columns:
+        minmax(8.75rem, max-content)
+        minmax(10.5rem, 16rem)
+        minmax(0, 1fr);
+      column-gap: 1.25rem;
+    }
+  }
+
+  .cv-title {
+    font-weight: 600;
+    color: #333;
+    line-height: 1.55;
+    padding-right: 0.25rem;
+  }
+
+  .cv-detail p.cv-company {
+    margin: 0 0 0.35rem;
+    font-weight: 600;
+    color: #333;
   }
 
   .cv-when {
@@ -117,10 +138,19 @@
       grid-template-columns: 1fr;
       gap: 0.2rem;
       margin-bottom: 1rem;
+
+      &--with-role {
+        gap: 0.2rem;
+      }
     }
 
     .cv-when {
       margin-bottom: 0.15rem;
+    }
+
+    .cv-row--with-role .cv-title {
+      margin-bottom: 0.1rem;
+      font-size: 0.9375rem;
     }
   }
 }
