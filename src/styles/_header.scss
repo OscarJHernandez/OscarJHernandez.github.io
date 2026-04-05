@@ -80,14 +80,17 @@
   gap: 0.5rem;
   margin-top: 0.5rem;
 
-  .icon {
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    font-size: 18px;
-    padding: 10px;
+  /* Circle and hit target live on the link — sizing the <i> breaks FA4 glyphs (tofu squares). */
+  > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.625rem;
+    height: 2.625rem;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    text-decoration: none;
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
     &:hover,
@@ -98,11 +101,24 @@
     }
   }
 
+  .fa {
+    font-family: FontAwesome, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   @media only screen and (min-width: $cut) {
-    .icon {
-      width: 22px;
-      height: 22px;
-      font-size: 20px;
+    > a {
+      width: 2.875rem;
+      height: 2.875rem;
+    }
+
+    .fa {
+      font-size: 1.25rem;
     }
   }
 }
