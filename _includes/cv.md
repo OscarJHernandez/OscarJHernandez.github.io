@@ -4,21 +4,21 @@
 <div class="cv-row">
 <div class="cv-when">2023 - Present</div>
 <div class="cv-detail">
-<p>Gen Digital Inc.</p>
+<p>Data Engineer / Data Analyst, Gen Digital Inc.</p>
 <p class="cv-detail-note">Fortune 500 cybersecurity company (NASDAQ: GEN), parent of Norton, Avast, LifeLock, Avira and AVG.</p>
 </div>
 </div>
 <div class="cv-row">
 <div class="cv-when">2022 - 2023</div>
 <div class="cv-detail">
-<p>Avira (Part of Gen Digital Inc.)</p>
+<p>Product Data Scientist, Avira (Part of Gen Digital Inc.)</p>
 <p class="cv-detail-note">Leading consumer cybersecurity branch in DACH, acquired by Gen Digital.</p>
 </div>
 </div>
 <div class="cv-row">
 <div class="cv-when">2019 - 2022</div>
 <div class="cv-detail">
-<p>Zorc Cybernetics GmbH</p>
+<p>Data Scientist / Data Analyst, Zorc Cybernetics GmbH</p>
 <p class="cv-detail-note">B2B industrial technology company for process monitoring and optimization.</p>
 </div>
 </div>
