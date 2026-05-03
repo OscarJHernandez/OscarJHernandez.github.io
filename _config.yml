@@ -20,4 +20,11 @@ gplus_username:  lorem_ipsum
 google-analytics:
   id: ""
 
+# Blog / Posts
+permalink: /blog/:year/:month/:day/:title/
+paginate: 10
+
+# Syntax highlighting
+highlighter: rouge
+
 exclude: ['package.json', 'src', 'node_modules', 'vendor']

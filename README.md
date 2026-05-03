@@ -49,6 +49,81 @@ gplus_username:  lorem_ipsum
   - Edit the json data in particle function in app.js
   - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
 
+---
+
+## Writing a Blog Post
+
+All posts live in the `_posts/` folder.
+
+### 1. Create a file
+
+The filename **must** follow this exact format:
+
+```
+_posts/YYYY-MM-DD-short-title.md
+```
+
+Example: `_posts/2026-05-10-gradient-descent.md`
+
+### 2. Add front matter
+
+Every post starts with a YAML block at the top:
+
+```yaml
+---
+layout: post
+title: "Your Post Title"
+date: 2026-05-10
+category: Mathematics
+description: One sentence shown on the blog index page.
+---
+```
+
+**Fields:**
+| Field | Required | Notes |
+|---|---|---|
+| `layout` | yes | Always `post` |
+| `title` | yes | Shown in sidebar and post header |
+| `date` | yes | Must match the filename date |
+| `category` | yes | Groups posts in sidebar & index (e.g. `Mathematics`, `System Design`, `Physics`) |
+| `description` | no | Short summary shown on blog index |
+
+### 3. Write content
+
+After the front matter, write standard Markdown.
+
+**Math** (MathJax is enabled):
+```
+Inline: $E = mc^2$
+
+Block:
+$$
+\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$$
+```
+
+**Code blocks:**
+````
+```python
+def hello():
+    return "world"
+```
+````
+
+**Table of contents** — add `{:toc}` after a heading:
+```markdown
+## Contents
+{:toc}
+```
+
+### 4. Preview
+
+```bash
+npm run serve
+```
+
+The site rebuilds automatically on save. Blog is at **http://localhost:3000/blog/**
+
 ## Running the blog in local
 
 In order to compile the assets and run Jekyll on local you need to follow those steps:
