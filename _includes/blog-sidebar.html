@@ -1,0 +1,29 @@
+<nav class="blog-sidebar" aria-label="Blog navigation">
+  <div class="sidebar-header">
+    <a href="{{ '/blog/' | relative_url }}" class="sidebar-home-link">Blog</a>
+  </div>
+
+  {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+  {% assign categories = sorted_posts | map: "category" | uniq | sort %}
+
+  {% for cat in categories %}
+    {% assign cat_posts = sorted_posts | where: "category", cat %}
+    {% if cat_posts.size > 0 %}
+    <div class="sidebar-section">
+      <button class="sidebar-section-toggle" aria-expanded="true" aria-controls="sidebar-cat-{{ cat | slugify }}">
+        {{ cat }}
+      </button>
+      <ul class="sidebar-section-list" id="sidebar-cat-{{ cat | slugify }}">
+        {% for post in cat_posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}"
+             class="sidebar-post-link{% if page.url == post.url %} is-active{% endif %}">
+            {{ post.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  {% endfor %}
+</nav>

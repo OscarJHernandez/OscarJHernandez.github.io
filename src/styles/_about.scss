@@ -1,33 +1,140 @@
-#about {
+.page-content {
   width: 90%;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 720px;
+  padding: 2.5rem 0 1rem;
   @media only screen and (min-width: $cut) {
     width: 80%;
+    padding: 3rem 0 1.5rem;
   }
 }
 
-.tech {
-  margin: 10px;
+.intro-section {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.user {
-  text-align: center;
-  font-size: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  p {
-    font-size: 16px;
+.about-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+.intro-heading {
+  margin-top: 0;
+  text-align: left;
+  font-size: 1.35rem;
+}
+
+.intro-bio {
+  text-align: left;
+  margin: 0.85rem 0 1rem;
+  color: #444;
+  line-height: 1.55;
+  font-size: 0.9375rem;
+}
+
+.intro-links {
+  text-align: left;
+  margin: 0 0 1.25rem;
+  font-size: 0.9375rem;
+
+  a {
+    color: $link;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: $link-hover;
+      border-bottom-color: $link-hover;
+    }
   }
-  @media only screen and (min-width: $cut) {
-    flex-wrap: nowrap;
-    font-size: 75px;
-  }
+}
+
+.intro-links-sep {
+  margin: 0 0.5rem;
+  color: #999;
 }
 
 .user-details {
-  text-align: center;
-  margin: 5px auto;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.contact-block {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.contact-heading {
+  font-size: 1.35rem;
+}
+
+.contact-intro,
+.cv-contact-notice__text {
+  text-align: left;
+  margin: 0.85rem 0 0;
+  color: #444;
+  line-height: 1.55;
+  font-size: 0.9375rem;
+
+  a {
+    color: $link;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: $link-hover;
+      border-bottom-color: $link-hover;
+    }
+  }
+}
+
+.cv-contact-notice {
+  margin-bottom: 1.25rem;
+}
+
+.email-reveal-wrap {
+  display: inline;
+}
+
+.email-reveal-btn {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: $link;
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $link-hover;
+    border-bottom-color: $link-hover;
+  }
+}
+
+.email-reveal-link {
+  font-weight: 600;
+  color: $link;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $link-hover;
+    border-bottom-color: $link-hover;
+  }
 }
