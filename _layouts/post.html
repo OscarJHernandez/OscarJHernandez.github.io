@@ -1,0 +1,22 @@
+---
+layout: blog
+---
+
+<article class="post-article">
+  <header class="post-header">
+    <div class="post-meta">
+      <span class="post-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      {% if page.category %}
+      <span class="post-category">{{ page.category }}</span>
+      {% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>

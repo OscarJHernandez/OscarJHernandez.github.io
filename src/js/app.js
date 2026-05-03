@@ -26,3 +26,20 @@ document.addEventListener(
   },
   false
 );
+
+/* Blog sidebar section toggle */
+document.addEventListener(
+  'click',
+  function (e) {
+    var toggle = e.target.closest('.sidebar-section-toggle');
+    if (!toggle) return;
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    var listId = toggle.getAttribute('aria-controls');
+    var list = listId ? document.getElementById(listId) : null;
+    if (list) {
+      list.classList.toggle('is-collapsed', expanded);
+    }
+  },
+  false
+);
