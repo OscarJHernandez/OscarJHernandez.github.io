@@ -1,118 +1,45 @@
-/* sweetScroll load */
-document.addEventListener("DOMContentLoaded", function () {
-  const sweetScroll = new SweetScroll({/* some options */});
-
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS('particles-js', {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "polygon",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 19.18081918081918,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 4,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      },
-      nb: 80
-    },
-    "interactivity": {
-      "detect_on": "window",
-      "events": {
-        "onhover": {
-          "enable": false,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true
-  });
-
+/* sweetScroll for in-page anchor links */
+document.addEventListener('DOMContentLoaded', function () {
+  new SweetScroll({});
 }, false);
+
+document.addEventListener(
+  'click',
+  function (e) {
+    var btn = e.target.closest('.js-email-reveal');
+    if (!btn) return;
+    var b64 = btn.getAttribute('data-email-b64');
+    if (!b64) return;
+    e.preventDefault();
+    var wrap = btn.closest('.email-reveal-wrap');
+    if (!wrap) return;
+    try {
+      var addr = atob(b64);
+      var a = document.createElement('a');
+      a.href = 'mailto:' + addr;
+      a.textContent = addr;
+      a.className = 'email-reveal-link';
+      wrap.replaceChild(a, btn);
+    } catch (err) {
+      /* ignore invalid base64 */
+    }
+  },
+  false
+);
+
+/* Blog sidebar section toggle */
+document.addEventListener(
+  'click',
+  function (e) {
+    var toggle = e.target.closest('.sidebar-section-toggle');
+    if (!toggle) return;
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    var listId = toggle.getAttribute('aria-controls');
+    var list = listId ? document.getElementById(listId) : null;
+    if (list) {
+      list.classList.toggle('is-collapsed', expanded);
+    }
+  },
+  false
+);

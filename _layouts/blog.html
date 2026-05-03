@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-<!--
-  <meta property="og:image" content={{page.image}}>
--->
-  <link href="/assets/css/syntax.css" rel="stylesheet">
-  <body>
-	  {% include header.html %}
-         <section id="about">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="blog-body">
+    {% include header.html %}
+    <div class="blog-layout-wrapper">
+      <div class="blog-sidebar-col">
+        {% include blog-sidebar.html %}
+      </div>
+      <main class="blog-content-col" id="main-content">
         {{ content }}
-         </section>
-      {% include footer.html %}
+      </main>
+    </div>
+    {% include footer.html %}
   </body>
+</html>
