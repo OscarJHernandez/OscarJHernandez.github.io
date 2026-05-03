@@ -3,41 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   new SweetScroll({});
 }, false);
 
-// #region agent log
-(function () {
-  var ENDPOINT =
-    'http://127.0.0.1:7541/ingest/76d61dc9-79cb-4ec9-b447-afdcea5ca461';
-  function dbg(payload) {
-    payload.sessionId = '622099';
-    payload.timestamp = Date.now();
-    fetch(ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Debug-Session-Id': '622099',
-      },
-      body: JSON.stringify(payload),
-    }).catch(function () {});
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    var list = document.querySelectorAll('.header-icons svg.header-icon');
-    var first = list[0];
-    var r = first ? first.getBoundingClientRect() : null;
-    dbg({
-      location: 'app.js:header-svgs',
-      message: 'header inline SVG icons (post webfont bypass)',
-      data: {
-        svgCount: list.length,
-        firstWidthPx: r ? Math.round(r.width * 100) / 100 : null,
-        firstHeightPx: r ? Math.round(r.height * 100) / 100 : null,
-      },
-      hypothesisId: 'FIX-SVG',
-      runId: 'svg-icon-fix',
-    });
-  });
-})();
-// #endregion
-
 document.addEventListener(
   'click',
   function (e) {

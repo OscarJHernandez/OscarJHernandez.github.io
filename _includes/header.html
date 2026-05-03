@@ -1,4 +1,4 @@
-<header class="site-hero" role="banner">
+<header class="site-hero tex2jax_ignore" role="banner" data-mathjax-ignore>
   <div class="site-hero-inner">
     <h1 class="site-hero-title">
       <span class="site-title">{{ site.username }}</span>
@@ -7,7 +7,7 @@
       {% endif %}
     </h1>
     <div class="header-icons">
-      <a aria-label="Contact" href="{{ site.baseurl }}/#contact">
+      <a aria-label="Contact" href="{{ '/' | relative_url }}#contact">
         <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
       </a>
       <a aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/oscar-javier-hernandez/">
@@ -18,8 +18,8 @@
       </a>
     </div>
     <nav class="header-links" aria-label="Primary">
-      <a class="link" href="{{ site.baseurl }}/#about">About</a>
-      <a class="link" href="{{ site.baseurl }}/resume/">CV</a>
+      <a class="link" href="{{ '/' | relative_url }}#about">About</a>
+      <a class="link" href="{{ '/resume/' | relative_url }}">CV</a>
     </nav>
   </div>
 </header>
