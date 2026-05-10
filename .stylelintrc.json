@@ -1,5 +1,18 @@
 {
   "extends": ["stylelint-config-standard-scss"],
+  "overrides": [
+    {
+      "files": ["src/styles/lib/*.scss"],
+      "rules": {
+        "declaration-block-single-line-max-declarations": null,
+        "font-family-no-missing-generic-family-keyword": null,
+        "number-max-precision": null,
+        "font-family-no-duplicate-names": null,
+        "no-duplicate-selectors": null,
+        "declaration-block-no-duplicate-properties": null
+      }
+    }
+  ],
   "rules": {
     "selector-class-pattern": null,
     "no-descending-specificity": null,

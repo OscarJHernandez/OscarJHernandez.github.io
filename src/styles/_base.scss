@@ -12,9 +12,11 @@ body {
 button, input, select, textarea {
     font-family: inherit;
 }
+
 article, aside, figcaption, figure, footer, header, nav, section {
     display: block;
 }
+
 h1, h2, h3, h4, strong {
     margin-top: 1.5em;
     padding-top: 0;
@@ -23,30 +25,37 @@ h1, h2, h3, h4, strong {
     font-family: $font-sans;
     font-weight: 700;
 }
+
 h1 {
     font-size: 2rem;
     letter-spacing: -0.03em;
 }
+
 h2 {
     font-size: 1.5rem;
     letter-spacing: -0.02em;
 }
+
 h3 {
     font-size: 1.2rem;
     letter-spacing: -0.01em;
 }
+
 h4 {
     font-size: 1rem;
     font-weight: 600;
 }
+
 ul, ol {
     margin: 1em 0;
     padding-left: 1.75rem;
     text-align: left;
 }
+
 p, figure {
     margin: 1em 0;
 }
+
 a {
     color: $link;
 
@@ -59,6 +68,7 @@ a {
 a img {
     border: none;
 }
+
 sup, sub {
     line-height: 0;
 }
