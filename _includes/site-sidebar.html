@@ -1,0 +1,19 @@
+<nav class="site-sidebar" aria-label="Site navigation">
+  <div class="site-sidebar-header">
+    <a class="site-sidebar-brand" href="{{ '/' | relative_url }}">{{ site.username }}</a>
+  </div>
+  <ul class="site-nav-list">
+    <li>
+      <a class="site-nav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}"
+         href="{{ '/' | relative_url }}#about">About</a>
+    </li>
+    <li>
+      <a class="site-nav-link{% if page.url contains '/blog' %} is-active{% endif %}"
+         href="{{ '/blog/' | relative_url }}">Blog</a>
+    </li>
+    <li>
+      <a class="site-nav-link{% if page.url contains '/resume' %} is-active{% endif %}"
+         href="{{ '/resume/' | relative_url }}">CV</a>
+    </li>
+  </ul>
+</nav>

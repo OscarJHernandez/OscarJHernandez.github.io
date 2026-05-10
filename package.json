@@ -6,7 +6,9 @@
   "scripts": {
     "build": "gulp build",
     "serve": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:scss": "stylelint 'src/styles/**/*.scss'",
+    "lint:scss:fix": "stylelint 'src/styles/**/*.scss' --fix",
+    "test": "npm run lint:scss"
   },
   "author": "Nathan Randecker",
   "license": "ISC",
@@ -19,5 +21,12 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "pa11y-ci": "^3.1.0",
+    "serve": "^14.2.1",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "wait-on": "^7.2.0"
   }
 }

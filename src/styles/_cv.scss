@@ -3,12 +3,14 @@
   padding-bottom: 3rem;
 
   h2 {
-    margin-top: 2.25rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid $main;
     font-size: 1.35rem;
-    color: #222;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #111827;
     text-align: left;
 
     &:first-child {
@@ -19,8 +21,8 @@
   p {
     text-align: left;
     margin: 0.65rem 0;
-    line-height: 1.55;
-    color: #444;
+    line-height: 1.7;
+    color: #4b5563;
   }
 
   table {
@@ -39,9 +41,9 @@
   }
 
   th {
-    font-weight: 600;
-    color: #333;
-    background: #f7f7f8;
+    font-weight: 700;
+    color: #111827;
+    background: #f8f9fa;
   }
 
   tr:last-child td {
@@ -51,7 +53,7 @@
   td:first-child {
     white-space: nowrap;
     width: 1%;
-    color: #555;
+    color: #6b7280;
     font-weight: 500;
   }
 
@@ -89,8 +91,7 @@
         minmax(9.5rem, 15rem)
         minmax(0, 1fr);
       grid-template-rows: auto auto;
-      column-gap: 1rem;
-      row-gap: 0;
+      gap: 0 1rem;
       margin-bottom: 1.15rem;
     }
 
@@ -172,7 +173,7 @@
     letter-spacing: 0.01em;
   }
 
-  @media (max-width: 36rem) {
+  @media (width <= 36rem) {
     .cv-row {
       grid-template-columns: 1fr;
       gap: 0.2rem;

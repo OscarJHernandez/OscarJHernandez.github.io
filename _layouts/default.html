@@ -5,9 +5,16 @@
   </head>
   <body>
     {% include header.html %}
-    <section id="about" class="page-content intro-section">
-      {% include about.html %}
-    </section>
+    <div class="site-layout-wrapper">
+      <div class="site-sidebar-col">
+        {% include site-sidebar.html %}
+      </div>
+      <main class="site-content-col">
+        <section id="about" class="page-content intro-section">
+          {% include about.html %}
+        </section>
+      </main>
+    </div>
     {% include footer.html %}
   </body>
 </html>

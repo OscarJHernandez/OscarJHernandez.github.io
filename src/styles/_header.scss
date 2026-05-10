@@ -1,19 +1,15 @@
 .site-hero {
   background: $main;
   color: #fff;
-  padding: 2.5rem 1.25rem 2rem;
+  padding: 3rem 1.5rem 2.5rem;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: $font-sans;
 }
 
 .site-hero-inner {
   max-width: 720px;
   margin: 0 auto;
-}
-
-.site-hero-title {
-  margin: 0 0 1.25rem;
-  font-weight: 600;
 }
 
 .site-hero-title {
@@ -26,25 +22,28 @@
 
   .site-title {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     line-height: 1.2;
     color: #fff;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+
     @media only screen and (min-width: $cut) {
-      font-size: 1.95rem;
+      font-size: 2.1rem;
     }
   }
 
   .site-description {
     display: block;
     margin-top: 0.5rem;
-    font-size: 0.9375rem;
-    line-height: 1.45;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 400;
+    letter-spacing: -0.01em;
+
     @media only screen and (min-width: $cut) {
-      font-size: 1rem;
+      font-size: 1.0625rem;
     }
   }
 }
@@ -109,7 +108,7 @@
     overflow: visible;
 
     path {
-      fill: currentColor;
+      fill: currentcolor;
     }
   }
 
