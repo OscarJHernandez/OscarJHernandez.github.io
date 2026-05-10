@@ -173,8 +173,13 @@ npm run lint:scss
 # HTMLProofer (requires Jekyll build first)
 bundle exec jekyll build
 bundle exec htmlproofer ./_site --disable-external --checks "Links,Images,Scripts"
+
+# Accessibility
+npx serve ./_site -l 4000
+npx pa11y-ci --config .pa11yci
 ```
 
+The accessibility check runs Headless Chrome via Pa11y. CI-specific browser launch settings live in `/.pa11yci`.
 ---
 
 ## Deployment
