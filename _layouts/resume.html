@@ -5,10 +5,17 @@
 </head>
 <body>
   {% include header.html %}
-  <section id="{% if page.cv_page %}cv{% else %}about{% endif %}" class="page-content{% if page.cv_page %} cv-section{% endif %}">
-    {% if page.cv_page %}{% include cv-contact-notice.html %}{% endif %}
-    {{ content }}
-  </section>
+  <div class="site-layout-wrapper">
+    <div class="site-sidebar-col">
+      {% include site-sidebar.html %}
+    </div>
+    <main class="site-content-col">
+      <section id="{% if page.cv_page %}cv{% else %}about{% endif %}" class="page-content{% if page.cv_page %} cv-section{% endif %}">
+        {% if page.cv_page %}{% include cv-contact-notice.html %}{% endif %}
+        {{ content }}
+      </section>
+    </main>
+  </div>
   {% include footer.html %}
 </body>
 </html>

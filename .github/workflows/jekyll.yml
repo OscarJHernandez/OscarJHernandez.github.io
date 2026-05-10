@@ -7,8 +7,10 @@
 name: Deploy Jekyll site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
+  # Trigger only after the CI workflow completes successfully on master
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
     branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -30,6 +32,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6

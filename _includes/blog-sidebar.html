@@ -1,6 +1,14 @@
 <nav class="blog-sidebar" aria-label="Blog navigation">
   <div class="sidebar-header">
-    <a href="{{ '/blog/' | relative_url }}" class="sidebar-home-link">Blog</a>
+    <a href="{{ '/' | relative_url }}" class="sidebar-home-link">{{ site.username }}</a>
+  </div>
+
+  <div class="sidebar-main-nav">
+    <ul class="sidebar-main-nav-list">
+      <li><a class="sidebar-main-nav-link" href="{{ '/' | relative_url }}#about">About</a></li>
+      <li><a class="sidebar-main-nav-link is-active" href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li><a class="sidebar-main-nav-link" href="{{ '/resume/' | relative_url }}">CV</a></li>
+    </ul>
   </div>
 
   {% assign sorted_posts = site.posts | sort: "date" | reverse %}

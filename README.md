@@ -1,73 +1,81 @@
-# Particle Jekyll Theme
+# Oscar J. Hernandez — Personal Site
 
-This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+Personal portfolio and blog. Built with Jekyll, styled with SCSS (compiled via Gulp), and deployed to GitHub Pages.
 
-The Theme features:
+## Prerequisites
 
-- Gulp
-- SASS
-- Sweet Scroll
-- Particle.js
-- BrowserSync
-- Font Awesome and Devicon icons
-- Google Analytics
-- Info Customization
+| Tool | Version | Install |
+|---|---|---|
+| **Node.js** | 20+ | [nodejs.org](https://nodejs.org/) |
+| **Ruby** | 3.2+ | [ruby-lang.org](https://www.ruby-lang.org/) or `rbenv` / `rvm` |
+| **Bundler** | latest | `gem install bundler` |
 
-## Basic Setup
+---
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Fork the [Particle Theme](https://github.com/nrandecker/particle/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
+## Local Setup (first time)
 
-## Site and User Settings
+```bash
+# 1. Clone the repo
+git clone https://github.com/OscarJHernandez/OscarJHernandez.github.io.git
+cd OscarJHernandez.github.io
 
-You have to fill some informations on `_config.yml` to customize your site.
+# 2. Install Node dependencies (Gulp, Sass, etc.)
+npm install
 
-```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
-
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
+# 3. Install Ruby dependencies (Jekyll, html-proofer, etc.)
+bundle install
 ```
 
-**Don't forget to change your url before you deploy your site!**
+---
 
-## Color and Particle Customization
-- Color Customization
-  - Edit the sass variables
-- Particle Customization
-  - Edit the json data in particle function in app.js
-  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
+## Running Locally
+
+```bash
+# Compile SCSS + JS, build Jekyll, and start BrowserSync with live reload
+npm run serve
+```
+
+The site is served at **http://localhost:3000** and rebuilds automatically on any file change.
+
+If you only want to compile assets without starting a server:
+
+```bash
+npm run build
+```
+
+If you only want to run Jekyll directly (no BrowserSync):
+
+```bash
+bundle exec jekyll serve
+# → http://localhost:4000
+```
+
+---
+
+## Project Structure
+
+```
+_config.yml          # Site settings (name, email, analytics ID)
+_includes/           # Reusable HTML partials (header, footer, etc.)
+_layouts/            # Page templates (default, blog, post, resume)
+_posts/              # Blog posts (YYYY-MM-DD-title.md)
+src/
+  styles/            # SCSS source files (compiled → assets/css/main.css)
+  js/                # JS source (compiled → assets/js/main.js)
+assets/              # Compiled/static output — do not edit directly
+```
 
 ---
 
 ## Writing a Blog Post
 
-All posts live in the `_posts/` folder.
+### 1. Create a file in `_posts/`
 
-### 1. Create a file
-
-The filename **must** follow this exact format:
-
-```
-_posts/YYYY-MM-DD-short-title.md
-```
+Filename format: `_posts/YYYY-MM-DD-short-title.md`
 
 Example: `_posts/2026-05-10-gradient-descent.md`
 
 ### 2. Add front matter
-
-Every post starts with a YAML block at the top:
 
 ```yaml
 ---
@@ -79,7 +87,6 @@ description: One sentence shown on the blog index page.
 ---
 ```
 
-**Fields:**
 | Field | Required | Notes |
 |---|---|---|
 | `layout` | yes | Always `post` |
@@ -88,12 +95,11 @@ description: One sentence shown on the blog index page.
 | `category` | yes | Groups posts in sidebar & index (e.g. `Mathematics`, `System Design`, `Physics`) |
 | `description` | no | Short summary shown on blog index |
 
-### 3. Write content
-
-After the front matter, write standard Markdown.
+### 3. Write content in Markdown
 
 **Math** (MathJax is enabled):
-```
+
+```markdown
 Inline: $E = mc^2$
 
 Block:
@@ -103,55 +109,84 @@ $$
 ```
 
 **Code blocks:**
-````
+
+````markdown
 ```python
 def hello():
     return "world"
 ```
 ````
 
-**Table of contents** — add `{:toc}` after a heading:
-```markdown
-## Contents
-{:toc}
+---
+
+## Customization
+
+### Site info
+
+Edit `_config.yml`:
+
+```yaml
+username: Oscar J. Hernandez
+user_title: "Data Scientist & Engineer"
+email: you@example.com
+google-analytics:
+  id: "G-XXXXXXXXXX"   # leave empty to disable
 ```
 
-### 4. Preview
+### Colors
+
+Edit `src/styles/_vars.scss`, then recompile:
 
 ```bash
-npm run serve
+npm run build
 ```
 
-The site rebuilds automatically on save. Blog is at **http://localhost:3000/blog/**
+Current palette:
 
-## Running the blog in local
+| Variable | Value | Used for |
+|---|---|---|
+| `$main` | `#1a222c` | Hero background, headings |
+| `$link` | `#2563eb` | Links, active states |
+| `$link-hover` | `#1d4ed8` | Link hover |
+| `$sec` | `#4B5664` | Secondary text |
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+---
 
-- Install [NodeJS](https://nodejs.org/)
-- Run `npm install`
-- Run `npm run build` to compile assets (and Jekyll when Ruby is set up)
-- Run `npm run serve` (or `npx gulp`) for BrowserSync after `bundle install`
+## Automated Testing (CI)
 
-## Running Locally with Jekyll:
-* Install gem bundler:
-$ gem install bundler
-$ bundle install
-$ sudo apt-get install ruby2.3 ruby2.3-dev 
+Three test jobs run automatically on every push and pull request via GitHub Actions:
 
-* Run locally
-$ bundle exec jekyll serve
+| Job | What it checks |
+|---|---|
+| **Build + HTMLProofer** | Jekyll build succeeds; all internal links, images, and scripts resolve |
+| **SCSS Lint** | `src/styles/**/*.scss` passes Stylelint (`stylelint-config-standard-scss`) |
+| **Accessibility** | Home, blog index, and resume pass WCAG 2AA via pa11y-ci |
 
-## Questions
+The deploy to GitHub Pages only runs after all three jobs pass on `master`.
 
-Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
+### Run tests locally
+
+```bash
+# SCSS lint
+npm run lint:scss
+
+# HTMLProofer (requires Jekyll build first)
+bundle exec jekyll build
+bundle exec htmlproofer ./_site --disable-external --checks "Links,Images,Scripts"
+```
+
+---
+
+## Deployment
+
+Pushing to `master` triggers the CI workflow. If all tests pass, the site is automatically deployed to GitHub Pages. No manual steps needed.
+
+To deploy manually (skipping CI):
+
+1. Go to **Actions → Deploy Jekyll site to Pages → Run workflow**
+
+---
 
 ## License
 
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
-
-## Credits
-
-This theme was partially designed with the inspiration from these fine folks
-- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
-- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
+MIT

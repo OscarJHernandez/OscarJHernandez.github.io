@@ -1,17 +1,158 @@
+// ─── Site Layout (home + CV pages with sidebar) ──────────────────────────────
+
+.site-layout-wrapper {
+  display: flex;
+  align-items: flex-start;
+  min-height: calc(100vh - 160px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-sidebar-col {
+  width: 260px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #e5e7eb;
+  background: #f8f9fa;
+}
+
+.site-content-col {
+  flex: 1;
+  min-width: 0;
+  padding: 2.5rem 3rem;
+  max-width: 800px;
+
+  // Page-content centering is handled by the column padding now
+  .page-content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.site-sidebar {
+  padding: 1.5rem 0 2rem;
+}
+
+.site-sidebar-header {
+  padding: 0 1.25rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 0;
+}
+
+.site-sidebar-brand {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: $main;
+  text-decoration: none;
+  line-height: 1.4;
+
+  &:hover,
+  &:focus {
+    color: $link;
+  }
+}
+
+.site-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-nav-link {
+  display: block;
+  padding: 0.3rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+
+  &:hover,
+  &:focus {
+    color: $link;
+    background: #eef2ff;
+    border-left-color: $link;
+  }
+
+  &.is-active {
+    color: $link;
+    background: #eef2ff;
+    border-left-color: $link;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: $cut) {
+  .site-layout-wrapper {
+    flex-direction: column;
+  }
+
+  .site-sidebar-col {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .site-content-col {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .site-sidebar {
+    padding: 0;
+  }
+
+  .site-sidebar-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .site-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .site-nav-link {
+    padding: 0.4rem 0.75rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      border-left-color: transparent;
+      border-bottom-color: $link;
+      background: none;
+    }
+  }
+}
+
+// ─── Page Content ─────────────────────────────────────────────────────────────
+
 .page-content {
   width: 90%;
   margin: 0 auto;
   max-width: 720px;
-  padding: 2.5rem 0 1rem;
+  padding: 3rem 0 2rem;
   @media only screen and (min-width: $cut) {
-    width: 80%;
-    padding: 3rem 0 1.5rem;
+    width: 82%;
+    padding: 4rem 0 2.5rem;
   }
 }
 
 .intro-section {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 2rem;
 }
 
 .about-inner {
@@ -21,16 +162,20 @@
 
 .intro-heading {
   margin-top: 0;
+  padding-top: 0;
   text-align: left;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.02em;
 }
 
 .intro-bio {
   text-align: left;
   margin: 0.85rem 0 1rem;
-  color: #444;
-  line-height: 1.55;
-  font-size: 0.9375rem;
+  color: #4b5563;
+  line-height: 1.75;
+  font-size: 1rem;
 }
 
 .intro-links {
@@ -65,22 +210,25 @@
 }
 
 .contact-block {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #e8e8e8;
+  margin-top: 2.5rem;
 }
 
 .contact-heading {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .contact-intro,
 .cv-contact-notice__text {
   text-align: left;
   margin: 0.85rem 0 0;
-  color: #444;
-  line-height: 1.55;
-  font-size: 0.9375rem;
+  color: #4b5563;
+  line-height: 1.75;
+  font-size: 1rem;
 
   a {
     color: $link;
