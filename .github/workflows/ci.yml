@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  # ── 1. Build, HTMLProofer ────────────────────────────────────────────────────
+  build:
+    name: Build & HTMLProofer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Compile assets (SCSS + JS)
+        run: npm run build
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: test
+
+      - name: HTMLProofer (internal links only)
+        run: |
+          bundle exec htmlproofer ./_site \
+            --disable-external \
+            --ignore-urls "/^#/" \
+            --no-enforce-https \
+            --checks "Links,Images,Scripts"
+
+      - name: Upload _site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: ./_site
+          retention-days: 1
+
+  # ── 2. SCSS Linting ─────────────────────────────────────────────────────────
+  lint-scss:
+    name: SCSS Lint (Stylelint)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Run Stylelint
+        run: npx stylelint "src/styles/**/*.scss"
+
+  # ── 3. Accessibility (pa11y) ─────────────────────────────────────────────────
+  a11y:
+    name: Accessibility (pa11y)
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Download _site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: ./_site
+
+      - name: Serve site and run pa11y-ci
+        run: |
+          npx serve ./_site -l 4000 &
+          npx wait-on http://localhost:4000 --timeout 30000
+          npx pa11y-ci --config .pa11yci
