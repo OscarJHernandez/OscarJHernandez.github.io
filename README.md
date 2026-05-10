@@ -180,7 +180,6 @@ npx pa11y-ci --config .pa11yci
 ```
 
 The accessibility check runs Headless Chrome via Pa11y. CI-specific browser launch settings live in `/.pa11yci`.
-
 ---
 
 ## Deployment
